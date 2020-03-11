@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header down">
+        Home
+    </div>
+
+    <table class="table" style="border: solid 1px black">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Họ và Tên</th>
+                <th scope="col">Mssv</th>
+                <th scope="col">AddressEmail</th>
+                <th scope="col">EmailSV</th>
+                <th scope="col">IDTeam</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let member of arrMember">
+                <th scope="row">{{ member.stt }}</th>
+                <td>{{ member.hoten }}</td>
+                <td>{{ member.mssv }}</td>
+                <td>{{ member.Addressmail }}</td>
+                <td>{{ member.EmailSV }}</td>
+                <td>{{ member.IDTeam }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
