@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>1612687 - Shop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href= "{{ url_for('static',filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=changa+one" type="text/css">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/1612687.css') }}" type= "text/css">
+    
+</head>
+
+<body>
+    <!--header-->
+
+    <header class="container" >
+        <nav class="navbar navbar-expand-sm navbar-light px-0">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static',filename='images/logo1.png') }}" alt="">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#menu" aria-controls="menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        
+                            <a class="nav-link dropdown-toggle" href="category.html" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Danh mục
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" href="shoe.html">Giày</a>
+                              <a class="dropdown-item" href="#">Áo kiểu</a>
+                              <a class="dropdown-item" href="#">Váy kiểu</a>
+                              <a class="dropdown-item" href="#">Túi kiểu</a>
+                            </div>
+                         
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog </a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!--/header-->
+    <!--banner-->
+    <div class="container-fluid" id="banner" >
+        
+        <div class="container">
+           
+            <h4><center>Nhận ưu đãi và sản phẩm giá tốt nhất</center>
+                <br /><center>HÀNG NGÀY! </center></h4>
+                           
+         </div>
+    </div>
+    <!--/banner-->
+    <!--main-->
+    <div class="container" id="main" >
+      
+    <div class="row" >
+        <div class="col text-center">
+            <img src="{{ url_for('static',filename='images/shoe.png') }}" alt="">
+            <h4>Giày</h4>
+            <div>Các loại giày như: Giày sandal, giày cao gót, giày búp bê, giày thể thao, dép guốc</div>
+            <a href="">Xem thêm</a>
+        </div>
+        <div class="col text-center">
+            <img src="{{ url_for('static',filename='images/shirt.png') }}" alt="">
+            <h4>Áo kiểu</h4>
+            <div>Các loại áo như: Áo thun, áo sơ mi, áo hai dây, áo quảng châu, áo khoác, áo dạ, áo da</div>
+            <a href="#">Xem thêm</a>
+        </div>
+        <div class="col text-center">
+            <img src="{{ url_for('static',filename='images/dress.png') }}" alt="">
+            <h4>Váy kiếu</h4>
+            <div>Các loại váy như: Váy công sở, đầm chữ A, đầm đi tiệc, váy jean, váy hàn quốc, váy xòe, váy dài, quần giả váy</div>
+            <a href="#">Xem thêm</a>
+        </div>
+        <div class="col text-center">
+            <img src="{{ url_for('static',filename='images/bag.png') }}" alt="">
+            <h4>Túi kiểu</h4>
+            <div>Các loại túi như: Túi cở lớn, túi cở trung, túi cở nhỏ, túi jean, túi đính đá, túi cầm tai, túi kẹp nách, balo, ví</div>
+            <a href="des.html">Xem thêm</a>
+        </div>
+        
+    </div>
+    </div>
+    <!--/main-->
+    <!--aboutme-->
+    <div class="container-fluid about py-4">
+        <div class="container">
+            <div class="row">
+                <h3>Giới thiệu cá nhân</h3>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                  <img class="hinh" src="{{ url_for('static',filename='images/img_me1.jpg') }}" alt="">
+                </div>
+                <div class="col-9">
+                    <p>
+                   
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut sed optio placeat explicabo dignissimos. Recusandae incidunt perferendis culpa sit?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut sed optio placeat explicabo dignissimos. Recusandae incidunt perferendis culpa sit?
+                        
+                    </p>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+    <!--/aboutme-->
+    <!--aboutus-->
+    <div class="container aboutus ">
+        
+        <h3>Nhóm HCMUS-EC-20B01</h3>
+        <div class="row">
+            <div class="col-3">
+                <div>
+                    <img src="{{ url_for('static',filename='images/2.png') }}" alt="">
+                    <h4>Nhóm trưởng:<br/> Thái Vĩnh Toàn</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div>
+                    <img src="{{ url_for('static',filename='images/5.png') }}" alt="">
+                    <h4>Thư kí:<br/> Phan Thị Mỹ Diễm</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div>
+                    <img src="{{ url_for('static',filename='images/4.png') }}" alt="">
+                    <h4>Thành viên:<br/> Nguyễn Hữu Dũng</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div>
+                    <img src="{{ url_for('static',filename='images/3.png') }}" alt="">
+                    <h4>Thành viên:<br/> Huỳnh Khải Trân</h4>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+    </div><!--/aboutus-->
+    <!--footer-->
+    <div class="footer font-small cyan darken-3">
+      <a  data-toggle="tooltip" title="Đi tới facebook!"> <img src="{{ url_for('static',filename='images/fb.jpg') }}" alt="" width="50px" height="50px"></a>
+       <p>@coppyright by 1612687</p>
+    </div><!--/footer-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();   
+            });
+            </script>
+</body>
+
+</html>
