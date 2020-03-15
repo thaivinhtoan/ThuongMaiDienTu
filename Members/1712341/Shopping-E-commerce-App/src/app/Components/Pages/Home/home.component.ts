@@ -13,6 +13,7 @@ export class HomeComponent{
   constructor( private memberService: MemberService ){
     memberService.getMember().subscribe(data=>{    // subscribe: chờ cho getCategory() chạy xong mới được xử lý tiếp kết quả
       this.arrMember=(data);
+      console.log(data);
       console.log( this.arrMember);
 
     });

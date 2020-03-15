@@ -12,11 +12,13 @@ import { ActivatedRoute } from "@angular/router";
 
 export class DetailComponent{
   CategoryId;
+  // CategoryName;
   arrProducts;
   constructor( private SubService: SubService, private route: ActivatedRoute ){
-    this.CategoryId =  this.route.snapshot.paramMap.get("id")
+    this.CategoryId =  this.route.snapshot.paramMap.get("id");
+    // this.CategoryName = this.route.snapshot.paramMap.get("name");
     SubService.getSubcate(this.CategoryId).subscribe(data=>{
-      console.log('data');
+      this.arrProducts = data;
       console.log(data);
     });
   }

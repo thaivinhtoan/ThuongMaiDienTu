@@ -86,7 +86,6 @@ var Memberstorage = multer.diskStorage({
 var uploadMember = multer({
     storage: Memberstorage,
     fileFilter: function(req, file, cb) {
-        console.log(file);
         if (file.mimetype == "image/bmp" ||
             file.mimetype == "image/jpg" ||
             file.mimetype == "image/jpeg" ||
@@ -128,28 +127,37 @@ app.post("/api/member", function(req, res) {
     });
 })
 
-// lấy dữ liệu subcate ra
-app.get("/api/subcate/:id", function(req, res) {
-    var id = req.params.id;
-    Category.find({ _id: id }, function(err, items) {
+// Lấy subCateID theo CateID
+function _get_subCate_by_CateID(id) {
+    var promise = Category.find({ _id: id }).exec();
+    return promise;
+}
+
+function _get_infosubCate(id) {
+    SubCategory.find({ _id: id }, function(err, el) {
         if (err) {
-            res.json({ result: 0, "err": err });
+            return 0;
         } else {
-            var resultItems = [];
-            var subcats = items[0].SubCat_Id;
-            subcats.forEach(element => {
-                SubCategory.find({ _id: element }, function(err, el) {
-                    if (err) {
-                        res.json({ result: 0, "err": err });
-                    } else {
-                        resultItems.push(el[0]);
-                    }
-                });
-            });
-            if (resultItems) {
-                res.json(resultItems);
-            }
+            return el[0];
         }
+    });
+}
+
+// lấy dữ liệu subcate ra
+app.post("/api/subcate/:idCategory", function(req, res) {
+    var id = req.params.idCategory; //-> laays ra 5e64b4b8e840433728d81830
+    var Categories = _get_subCate_by_CateID(id); //-> nhét vào, tìm  CÁC category có id như trên
+    Categories.then(function(category) { //-> Tìm ra rồi, thì đặt từng thằng trong đó là category
+        category.forEach(function(Cat) { //-> duyệt từng cái nhỏ trong list category được tìm ra
+            var list_id = Cat.SubCat_Id;
+            SubCategory.find({ _id: { $in: list_id } }, function(err, el) {
+                if (err) {
+                    res.json({ result: 0, "err": err });
+                } else {
+                    res.json(el);
+                }
+            });
+        });
     });
 })
 
