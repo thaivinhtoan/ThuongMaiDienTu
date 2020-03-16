@@ -62,28 +62,32 @@
     <!--/header-->
      <!--MAIN--> 
      <div class="container">
+        {% for a in list %}
          <div class="row">
              <div class="col-4">
                 <div class="card" >
-                    <img class="card-img-top" src="images/img_me1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src={{a[4]}} alt="Card image cap" style="width: 500px; max-width: 100%; height: auto">
                   </div>
              </div>
              <div class="col-8">
+               
                 <dl class="row">
                     <dt class="col-sm-3">Tên sản phẩm</dt>
-                    <dd class="col-sm-9">Giay nike 222</dd>
+                    <dd class="col-sm-9">{{a[2]}}</dd>
                   
                     <dt class="col-sm-3">Thương hiệu</dt>
-                    </dd> <dd class="col-sm-9">Nike</dd>
+                    </dd> <dd class="col-sm-9">{{a[6]}}</dd>
                   
                     <dt class="col-sm-3">Mô tả</dt>
-                    <dd class="col-sm-9">gIAY MOI 2020 .................... DDDDDDDDDD</dd>
+                    <dd class="col-sm-9">{{a[3]}}</dd>
                     <dt class="col-sm-3">Giá</dt>
-                    <dd class="col-sm-9">5000000VND</dd>
+                    <dd class="col-sm-9">{{a[5]}}</dd>
                   </dl>
+                 
                   <button type="button" class="btn btn-primary">Mua ngay</button>
             </div>
         </div>
+        {% endfor %}
        
      <!--/MAIN-->
 

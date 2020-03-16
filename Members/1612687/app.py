@@ -20,7 +20,25 @@ def home():
 
 @app.route('/<category>')
 def category(category):
-    return render_template('category.html')
+    mycursor = mydb.cursor()
+    query = "SELECT * FROM product where id_category = {}".format(category)
+    mycursor.execute(query)
+    myresult = mycursor.fetchall()
+    for x in myresult:
+        print(x)
+   
+    return render_template('category.html', list = myresult)
+
+@app.route('/<category>/<des>')
+def des(category,des):
+    mycursor = mydb.cursor()
+    query = "SELECT * FROM product where id = {}".format(des)
+    mycursor.execute(query)
+    myresult = mycursor.fetchall()
+    for x in myresult:
+        print(x)
+   
+    return render_template('des.html', list = myresult)
 
 if __name__ == '__main__':
    app.run()
