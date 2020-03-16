@@ -1,97 +1,83 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <title>1612687 - Shop</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=changa+one" type="text/css">
-    <link rel="stylesheet" href="css/1612687.css">
-    
-</head> <!--header-->
-
+    <head>
+        <title>1612687 - Shop</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="shortcut icon" href= "{{ url_for('static',filename='images/favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href= "{{ url_for('static',filename='css/1612687.css') }}" type= "text/css">
+    </head>
 <body>
-   
-
-    <header class="container" >
-        <nav class="navbar navbar-expand-sm navbar-light px-0">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo1.png" alt="">
-            </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
-                data-target="#menu" aria-controls="menu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="menu">
-                <ul class="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Danh muc
-                            </a>
-                          
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">Giày</a>
-                              <a class="dropdown-item" href="#">Áo kiểu</a>
-                              <a class="dropdown-item" href="#">Túi kiểu</a>
-                              <a class="dropdown-item" href="#">Váy kiểu</a>
-                            </div>
-                         
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog </a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-    </header>
-    <!--/header-->
+ <!--header-->
+ <header class="container" >
+    <nav class="navbar navbar-expand-sm navbar-light px-0">
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static',filename='images/logo1.png') }}" alt="">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+            data-target="#menu" aria-controls="menu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+            <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="category.html" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Danh mục
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {% for a in cate %}
+                            <a class="dropdown-item" href=/{{a[0]}}>{{a[1]}}</a>
+                            {% endfor %}
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
+<!--/header-->
      <!--MAIN--> 
      <div class="container">
+        {% for a in list %}
          <div class="row">
              <div class="col-4">
                 <div class="card" >
-                    <img class="card-img-top" src="images/img_me1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src={{a[4]}} alt="Card image cap" style="width: 500px; max-width: 100%; height: auto">
                   </div>
              </div>
              <div class="col-8">
                 <dl class="row">
                     <dt class="col-sm-3">Tên sản phẩm</dt>
-                    <dd class="col-sm-9">Giay nike 222</dd>
+                    <dd class="col-sm-9">{{a[2]}}</dd>
                   
                     <dt class="col-sm-3">Thương hiệu</dt>
-                    </dd> <dd class="col-sm-9">Nike</dd>
+                    </dd> <dd class="col-sm-9">{{a[6]}}</dd>
                   
                     <dt class="col-sm-3">Mô tả</dt>
-                    <dd class="col-sm-9">gIAY MOI 2020 .................... DDDDDDDDDD</dd>
+                    <dd class="col-sm-9">{{a[3]}}</dd>
                     <dt class="col-sm-3">Giá</dt>
-                    <dd class="col-sm-9">5000000VND</dd>
+                    <dd class="col-sm-9">{{a[5]}} VNĐ</dd>
                   </dl>
+                 
                   <button type="button" class="btn btn-primary">Mua ngay</button>
             </div>
         </div>
-       
+        {% endfor %}
      <!--/MAIN-->
-
-    <!--footer-->
-    <div class="footer font-small cyan darken-3 footer2">
-      <a  data-toggle="tooltip" title="Đi tới facebook!"> <img src="images/fb.jpg" alt="" width="50px" height="50px"></a>
-       <p>@coppyright by 1612687</p>
-    </div><!--/footer-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
