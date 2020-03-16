@@ -20,6 +20,12 @@ export class ProductListComponent implements OnInit, OnDestroy {
       this.books = books;
     });
   }
+  onBookDetail(bookId: string) {
+    this.bookService.getBook(bookId).subscribe(book => {
+      console.log(book);
+    });
+
+  }
   ngOnDestroy() {
     this.bookSub.unsubscribe();
   }

@@ -20,7 +20,9 @@ export class BookService {
           imagePath: book.imagePath,
           name: book.name,
           author: book.author,
+          category: book.category,
           price: book.price,
+          publisher: book.publisher,
           publicationDate: date,
           height: book.height,
           width: book.width,
@@ -39,17 +41,39 @@ export class BookService {
 
   }
 
+  getBook(bookId: string) {
+    return this.http.get<{
+      _id: string,
+      imagePath: string,
+      name: string,
+      author: string,
+      category: string,
+      price: number,
+      publisher: string,
+      publicationDate: Date,
+      height: number,
+      width: number,
+      translator: string,
+      coverType: string,
+      totalPages: number,
+      introduction: string
+    }>("http://localhost:3000/api/books/" + bookId);
+  }
+
   getBookUpdateListener() {
     return this.booksUpdated.asObservable();
   }
 
-  addBook(image: File, name: string, author: string, price: number, publicationDate: string,
-    height: number, width: number, translator: string, coverType: string, totalPages: number, introduction: string) {
+  addBook(image: File, name: string, author: string, category: string, price: number, publisher: string, publicationDate: string,
+    height: number, width: number, translator: string, coverType: string, totalPages: number, introduction: string,
+  ) {
     const bookData = new FormData();
     bookData.append("image", image, name);
     bookData.append("name", name);
     bookData.append("author", author);
+    bookData.append("category", category);
     bookData.append("price", price.toString(10));
+    bookData.append("publisher", publisher);
     const date = new Date(publicationDate);
     bookData.append("publicationDate", date.getTime().toString());
     bookData.append("height", height.toString(10));
@@ -67,7 +91,9 @@ export class BookService {
         imagePath: responseData.book.imagePath,
         name: responseData.book.name,
         author: responseData.book.author,
+        category: responseData.book.category,
         price: responseData.book.price,
+        publisher: responseData.book.publisher,
         publicationDate: date,
         height: responseData.book.height,
         width: responseData.book.width,

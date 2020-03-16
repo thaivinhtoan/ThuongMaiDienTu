@@ -3,12 +3,14 @@ import { Routes, RouterModule } from "@angular/router";
 import { IntroductionComponent } from "./home/app-introduction.component";
 import { ProductListComponent } from './book/list/book-list.component';
 import { AddingBookComponent } from './book/create/book-add.component';
+import { BookDetailComponent } from './book/detail/book-detail.component';
 
 const routes: Routes = [
   { path: "", component: IntroductionComponent },
   { path: "home", component: IntroductionComponent },
   { path: "product", component: ProductListComponent },
-  { path: "create", component: AddingBookComponent }
+  { path: "add", component: AddingBookComponent },
+  { path: "product/:id", component: BookDetailComponent },
 ];
 
 @NgModule({

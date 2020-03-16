@@ -16,10 +16,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductListComponent } from './book/list/book-list.component';
 import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from '@angular/common/http';
-
+import { BookDetailComponent } from './book/detail/book-detail.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, IntroductionComponent, AddingBookComponent, ProductListComponent],
+  declarations: [AppComponent, HeaderComponent, IntroductionComponent, AddingBookComponent, ProductListComponent, BookDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

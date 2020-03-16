@@ -18,12 +18,20 @@
                 <mat-error *ngIf="form.get('author').invalid">Vui lòng nhập tên tác giả</mat-error>
             </mat-form-field>
             <mat-form-field>
+                <input placeholder="Thể loại" matInput type="text" formControlName='category' />
+                <mat-error *ngIf="form.get('category').invalid">Vui lòng nhập thể loại</mat-error>
+            </mat-form-field>
+            <mat-form-field>
                 <input placeholder="Dịch giả" matInput type="text" formControlName='translator' />
                 <mat-error *ngIf="form.get('translator').invalid">Vui lòng nhập tên dịch giả</mat-error>
             </mat-form-field>
             <mat-form-field>
                 <input placeholder="Giá bán" matInput type="number" formControlName='price' />
                 <mat-error *ngIf="form.get('price').invalid">Vui lòng nhập giá bán</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Nhà xuất bản" matInput type="text" formControlName='publisher' />
+                <mat-error *ngIf="form.get('publisher').invalid">Vui lòng nhập tên tác giả</mat-error>
             </mat-form-field>
             <mat-form-field>
                 <input placeholder="Ngày xuất bản" matInput type="date" formControlName='publicationDate' />

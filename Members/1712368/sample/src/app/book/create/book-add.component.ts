@@ -24,10 +24,15 @@ export class AddingBookComponent implements OnInit {
       author: new FormControl(null, {
         validators: [Validators.required]
       }),
-      translator: new FormControl(null, {
+      category: new FormControl(null, {
         validators: [Validators.required]
       }),
+      translator: new FormControl(null, {
+      }),
       price: new FormControl(null, {
+        validators: [Validators.required]
+      }),
+      publisher: new FormControl(null, {
         validators: [Validators.required]
       }),
       publicationDate: new FormControl(null, {
@@ -65,7 +70,9 @@ export class AddingBookComponent implements OnInit {
     this.bookService.addBook(this.form.value.image,
       this.form.value.name,
       this.form.value.author,
+      this.form.value.category,
       this.form.value.price,
+      this.form.value.publisher,
       this.form.value.publicationDate,
       this.form.value.height,
       this.form.value.width,

@@ -26,6 +26,15 @@ const storage = multer.diskStorage({
         cb(null, name + "." + ext);
     }
 });
+router.get("/:id", (req, res, next) => {
+    Book.findById(req.params.id).then(book => {
+        if (book) {
+            res.status(200).json(book);
+        } else {
+            res.status(404).json({ message: "Book not found!" });
+        }
+    })
+});
 router.get("", (req, res, next) => {
     Book.find().then(documents => {
         res.status(200).json({
@@ -44,13 +53,17 @@ router.post(
             imagePath: url + "/images/" + req.file.filename,
             name: req.body.name,
             author: req.body.author,
+            category: req.body.category,
             price: req.body.price,
+            publisher: req.body.publisher,
             publicationDate: req.body.publicationDate,
             height: req.body.height,
             width: req.body.width,
             translator: req.body.translator,
             coverType: req.body.coverType,
             totalPages: req.body.totalPages,
+            introduction: req.body.introduction,
+
         });
         console.log(book);
         book.save().then(addedBook => {

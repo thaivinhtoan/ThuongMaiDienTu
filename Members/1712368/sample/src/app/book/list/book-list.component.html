@@ -1,7 +1,7 @@
 <div class="main">
     <mat-grid-list cols="4" rowHeight="33rem">
         <mat-grid-tile *ngFor="let book of books">
-            <mat-card>
+            <mat-card [routerLink]="['/product', book.id]">
                 <mat-card-header>
                     <mat-card-title>{{book.name}}</mat-card-title>
                     <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
@@ -9,8 +9,8 @@
                 <img mat-card-image [src]="book.imagePath">
                 <div class="price">Giá bán: {{book.price.toLocaleString('vn')}} Đồng</div>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary">Mua ngay</button>
-                    <button mat-stroked-button color="primary">Chi tiết</button>
+                    <button mat-raised-button color="primary" [routerLink]="['/product', book.id]">Thêm vào giỏ</button>
+                    <button mat-stroked-button color="primary" [routerLink]="['/product', book.id]">Chi tiết</button>
                 </mat-card-actions>
             </mat-card>
         </mat-grid-tile>
