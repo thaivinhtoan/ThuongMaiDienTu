@@ -16,17 +16,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-// function MyController($scope, $http) {
-//     const server = http.createServer((req, res) => {
-//         res.setHeader('Content-Type', 'text/html');
-//         res.setHeader('X-Foo', 'bar');
-//         res.writeHead(200, { 'Content-Type': 'text/plain' });
-//         res.end('MehdiFilban solved this problem\nYour Header is set NOW\nGOOD LUCK...');
-//     }).listen(port, () => {
-//         console.log('your app is started');
-//     });
-// }
-
 
 //body - parser (upload file)
 var bodyParser = require('body-parser');
@@ -214,6 +203,10 @@ app.post("/subcate", function(req, res) {
             //save subcate
             var subcat = new SubCategory({
                 name: req.body.txtName, //nhap tu form
+                description: req.body.txtdescription, //nhap tu form
+                price: req.body.txtprice, //nhap tu form
+                viewRate: req.body.txtviewRate, //nhap tu form
+                Order: req.body.txtOrder, //nhap tu form
                 image: req.file.filename, //nhap tu form
                 file: req.body.txtFile //upload
             });
@@ -272,6 +265,19 @@ app.post("/AddMember", function(req, res) {
                     res.json({ Result: 1 });
                 }
             });
+        }
+    });
+});
+
+//------------- Detail Pro -------------------
+// lấy dữ liệu subcate ra
+app.post("/api/detailPro/:idSubCate", function(req, res) {
+    var id = req.params.idSubCate; //-> 
+    SubCategory.find({ _id: id }, function(err, el) {
+        if (err) {
+            res.json({ result: 0, "err": err });
+        } else {
+            res.json(el);
         }
     });
 });

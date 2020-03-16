@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,7 @@ import { SliderComponent } from './Components/Blocks/Slider/slider.component';
 import { UsersComponent } from './Components/Blocks/Users/user.component';
 import { CateComponent } from './Components/Blocks/Cate/cate.component';
 import { from } from 'rxjs';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -17,14 +18,16 @@ import { from } from 'rxjs';
     MenuComponent,
     SliderComponent,
     UsersComponent,
-    CateComponent,
+    CateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
