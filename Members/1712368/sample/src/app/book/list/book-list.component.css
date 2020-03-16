@@ -1,0 +1,23 @@
+mat-card {
+    margin: 0.5rem;
+}
+
+.main {
+    padding: 3rem;
+    background-color: #ecf0f1;
+}
+
+.price {
+    padding-left: 1rem;
+    font-weight: bold;
+    color: red;
+}
+
+mat-card-actions {
+    margin-left: 1rem;
+}
+
+button {
+    height: 2.6rem;
+    width: 8rem;
+}

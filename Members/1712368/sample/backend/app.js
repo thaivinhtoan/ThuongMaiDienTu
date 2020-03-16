@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const bookRoutes = require("./routes/books");
 const mongoose = require("mongoose");
-
+const path = require("path");
 mongoose
     .connect(
         "mongodb+srv://meokg456:1Snr1zywA6p0wrTi@clustertest-pxawm.mongodb.net/book-store?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }
@@ -17,6 +17,7 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/images", express.static(path.join("backend/images")));
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
