@@ -34,7 +34,7 @@ def des(category,des):
     query = "SELECT * FROM product where id = {}".format(des)
     mycursor.execute(query)
     myresult = mycursor.fetchall()
-    print(myresult)
+
     mycursor.execute("SELECT * FROM category")
     myresult2 = mycursor.fetchall()
    
