@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, session
 import mysql.connector
 app = Flask(__name__)
 mydb = mysql.connector.connect(
@@ -13,9 +13,7 @@ def home():
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM category")
     myresult = mycursor.fetchall()
-    print(type(myresult), flush=True)
-    for x in myresult:
-        print(x)
+    print(myresult)
     return render_template('index.html', list = myresult)
 
 @app.route('/<category>')
@@ -24,10 +22,11 @@ def category(category):
     query = "SELECT * FROM product where id_category = {}".format(category)
     mycursor.execute(query)
     myresult = mycursor.fetchall()
-    for x in myresult:
-        print(x)
+
+    mycursor.execute("SELECT * FROM category")
+    myresult2 = mycursor.fetchall()
    
-    return render_template('category.html', list = myresult)
+    return render_template('category.html', list = myresult, cate = myresult2)
 
 @app.route('/<category>/<des>')
 def des(category,des):
@@ -35,10 +34,11 @@ def des(category,des):
     query = "SELECT * FROM product where id = {}".format(des)
     mycursor.execute(query)
     myresult = mycursor.fetchall()
-    for x in myresult:
-        print(x)
+    print(myresult)
+    mycursor.execute("SELECT * FROM category")
+    myresult2 = mycursor.fetchall()
    
-    return render_template('des.html', list = myresult)
+    return render_template('des.html', list = myresult, cate = myresult2)
 
 if __name__ == '__main__':
    app.run()
