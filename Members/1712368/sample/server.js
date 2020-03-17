@@ -1,10 +1,7 @@
 const http = require("http");
 const app = require("./backend/app");
-const express = require("express");
 const debug = require("debug");
-var distDir = __dirname + "/dist/";
-console.log(distDir);
-app.use(express.static(distDir));
+
 const normalizePort = val => {
     var port = parseInt(val, 10);
     if (isNaN(port)) {
