@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/book.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { BookService } from 'src/app/book.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'book-detail',
@@ -13,7 +14,8 @@ export class BookDetailComponent implements OnInit {
 
     constructor(
         public booksService: BookService,
-        public route: ActivatedRoute) { }
+        public route: ActivatedRoute,
+        private titleService: Title) { }
     ngOnInit() {
         this.route.paramMap.subscribe((paramMap: ParamMap) => {
             const bookId = paramMap.get("id");
@@ -35,8 +37,8 @@ export class BookDetailComponent implements OnInit {
                     totalPages: book.totalPages,
                     introduction: book.introduction
                 };
-                console.log(this.book);
-                console.log(this.book.translator);
+
+                this.titleService.setTitle(book.name);
             });
         })
     }

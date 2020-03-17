@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BookService } from 'src/app/book.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: "add-book",
@@ -12,7 +13,7 @@ export class AddingBookComponent implements OnInit {
   form: FormGroup;
   imagePreview: string;
 
-  constructor(public bookService: BookService) { }
+  constructor(public bookService: BookService, private titleService: Title) { titleService.setTitle("Add book"); }
   ngOnInit() {
     this.form = new FormGroup({
       name: new FormControl(null, {

@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, IntroductionComponent, AddingBookComponent, ProductListComponent, BookDetailComponent],
   imports: [
@@ -40,7 +41,8 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatTreeModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

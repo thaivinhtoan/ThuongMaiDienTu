@@ -1,18 +1,24 @@
-.intro-label {
-    padding-left: 4rem;
-    padding-top: 4rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-ol {
-    padding-left: 6rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: large;
-}
-
 .body {
     background-image: url("./background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 43.3rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+}
+
+th {
+    text-align: center !important;
+    background-color: #f0d271;
+    font-weight: bold;
+    font-size: larger;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    background-color: #ffeaa7;
+    width: 80%;
 }

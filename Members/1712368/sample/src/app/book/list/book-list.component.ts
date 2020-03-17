@@ -3,6 +3,7 @@ import { Book } from '../../book.model';
 import { BookService } from 'src/app/book.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: "book-list",
@@ -15,15 +16,20 @@ export class ProductListComponent implements OnInit, OnDestroy {
   categories = [];
 
   private bookSub: Subscription;
-  constructor(private bookService: BookService, public route: ActivatedRoute, private router: Router) { }
+  constructor(private bookService: BookService, public route: ActivatedRoute,
+    private router: Router, private titleService: Title) {
+
+  }
   ngOnInit() {
     this.bookService.getCategories().subscribe(categoryData => {
       this.categories = categoryData.categories;
     });
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       const category = paramMap.get('category');
-      if (category)
+      if (category) {
         this.bookService.getBooks(category);
+        this.titleService.setTitle(category);
+      }
       else
         this.router.navigate(['/product/Tất cả']);
     })
