@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Book = require("../models/book");
+const Category = require("../models/category");
 const multer = require("multer");
 
 const MIME_TYPE_MAP = {
@@ -36,7 +37,7 @@ router.get("/book/:id", (req, res, next) => {
     });
 });
 router.get("/:category", (req, res, next) => {
-    if (req.params.category == "Tất cả") {
+    if (req.params.category == "tat-ca") {
         Book.find().then(books => {
             res.status(200).json({
                 message: "Book fetched successfully!",
@@ -44,10 +45,12 @@ router.get("/:category", (req, res, next) => {
             });
         });
     } else {
-        Book.find({ category: req.params.category }).then(books => {
-            res.status(200).json({
-                message: "Book fetched successfully!",
-                books: books
+        Category.findOne({ navigate: req.params.category }).then(category => {
+            Book.find({ category: category.name }).then(books => {
+                res.status(200).json({
+                    message: "Book fetched successfully!",
+                    books: books
+                });
             });
         });
     }

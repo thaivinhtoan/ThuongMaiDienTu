@@ -2,7 +2,7 @@
     <mat-drawer mode="side" opened color="accent">
         <mat-nav-list>
             <h1>Thể loại</h1>
-            <a mat-list-item routerLinkActive="active" [routerLink]="['/product/',category.name]" *ngFor="let category of categories">{{category.name}}</a>
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/product/',category.navigate]" *ngFor="let category of categories">{{category.name}}</a>
         </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>

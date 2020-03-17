@@ -28,10 +28,9 @@ export class ProductListComponent implements OnInit, OnDestroy {
       const category = paramMap.get('category');
       if (category) {
         this.bookService.getBooks(category);
-        this.titleService.setTitle(category);
       }
       else
-        this.router.navigate(['/product/Tất cả']);
+        this.router.navigate(['/product/tat-ca']);
     })
 
 
