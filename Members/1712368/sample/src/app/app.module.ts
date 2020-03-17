@@ -18,7 +18,9 @@ import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from '@angular/common/http';
 import { BookDetailComponent } from './book/detail/book-detail.component';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatTreeModule } from '@angular/material/tree';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, IntroductionComponent, AddingBookComponent, ProductListComponent, BookDetailComponent],
   imports: [
@@ -35,7 +37,10 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     HttpClientModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatTreeModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

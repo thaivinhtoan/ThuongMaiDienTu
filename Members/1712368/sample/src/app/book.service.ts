@@ -8,10 +8,11 @@ import { Subject } from 'rxjs';
 })
 export class BookService {
   private books: Book[] = [];
+
   constructor(private http: HttpClient) { };
   private booksUpdated = new Subject<Book[]>();
-  getBooks() {
-    this.http.get<{ message: string, books: any }>("http://localhost:3000/api/books").pipe(map(bookData => {
+  getBooks(category: string) {
+    this.http.get<{ message: string, books: any }>("http://localhost:3000/api/books/" + category).pipe(map(bookData => {
       return bookData.books.map(book => {
         const date = new Date(+book.publicationDate);
         console.log(date);
@@ -40,7 +41,9 @@ export class BookService {
     });
 
   }
-
+  getCategories() {
+    return this.http.get<{ message: string, categories: [] }>("http://localhost:3000/api/categories");
+  }
   getBook(bookId: string) {
     return this.http.get<{
       _id: string,
@@ -57,7 +60,7 @@ export class BookService {
       coverType: string,
       totalPages: number,
       introduction: string
-    }>("http://localhost:3000/api/books/" + bookId);
+    }>("http://localhost:3000/api/books/book/" + bookId);
   }
 
   getBookUpdateListener() {

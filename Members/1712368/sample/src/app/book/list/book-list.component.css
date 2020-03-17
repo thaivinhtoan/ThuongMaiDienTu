@@ -4,7 +4,7 @@ mat-card {
 
 .main {
     height: 100%;
-    padding: 3rem;
+    padding: 1rem;
     background-color: #ecf0f1;
 }
 
@@ -14,11 +14,36 @@ mat-card {
     color: red;
 }
 
-mat-card-actions {
-    margin-left: 1rem;
+h1 {
+    margin: 0;
+    padding: 1rem;
+    font-weight: 500;
+    width: auto;
+    background-color: #f5db87;
 }
 
-button {
-    height: 2.4rem;
-    width: 8rem;
+mat-nav-list {
+    border-style: ridge;
+    border-color: #f5db87;
+    padding: 0;
+}
+
+a.active {
+    background-color: green !important;
+}
+
+a {
+    border-style: ridge;
+    border-color: #f5db87;
+    border-bottom: 0;
+    padding-left: 3rem;
+}
+
+mat-drawer {
+    background-color: #ffeaa7;
+    width: 18%;
+}
+
+mat-drawer-container {
+    height: 100%;
 }

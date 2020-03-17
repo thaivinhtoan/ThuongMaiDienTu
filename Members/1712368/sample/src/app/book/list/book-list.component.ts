@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Book } from '../../book.model';
 import { BookService } from 'src/app/book.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: "book-list",
@@ -11,11 +12,23 @@ import { Subscription } from 'rxjs';
 export class ProductListComponent implements OnInit, OnDestroy {
 
   books: Book[] = [];
-  private bookSub: Subscription;
-  constructor(private bookService: BookService) { }
-  ngOnInit() {
+  categories = [];
 
-    this.bookService.getBooks();
+  private bookSub: Subscription;
+  constructor(private bookService: BookService, public route: ActivatedRoute, private router: Router) { }
+  ngOnInit() {
+    this.bookService.getCategories().subscribe(categoryData => {
+      this.categories = categoryData.categories;
+    });
+    this.route.paramMap.subscribe((paramMap: ParamMap) => {
+      const category = paramMap.get('category');
+      if (category)
+        this.bookService.getBooks(category);
+      else
+        this.router.navigate(['/product/Tất cả']);
+    })
+
+
     this.bookSub = this.bookService.getBookUpdateListener().subscribe((books: Book[]) => {
       this.books = books;
     });

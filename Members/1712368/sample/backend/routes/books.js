@@ -26,14 +26,31 @@ const storage = multer.diskStorage({
         cb(null, name + "." + ext);
     }
 });
-router.get("/:id", (req, res, next) => {
+router.get("/book/:id", (req, res, next) => {
     Book.findById(req.params.id).then(book => {
         if (book) {
             res.status(200).json(book);
         } else {
             res.status(404).json({ message: "Book not found!" });
         }
-    })
+    });
+});
+router.get("/:category", (req, res, next) => {
+    if (req.params.category == "Tất cả") {
+        Book.find().then(books => {
+            res.status(200).json({
+                message: "Book fetched successfully!",
+                books: books
+            });
+        });
+    } else {
+        Book.find({ category: req.params.category }).then(books => {
+            res.status(200).json({
+                message: "Book fetched successfully!",
+                books: books
+            });
+        });
+    }
 });
 router.get("", (req, res, next) => {
     Book.find().then(documents => {
@@ -48,7 +65,7 @@ router.post(
     multer({ storage: storage }).single("image"),
     (req, res, next) => {
         console.log(req.body);
-        const url = req.protocol + '://' + req.get("host");
+        const url = req.protocol + "://" + req.get("host");
         const book = new Book({
             imagePath: url + "/images/" + req.file.filename,
             name: req.body.name,
@@ -62,8 +79,7 @@ router.post(
             translator: req.body.translator,
             coverType: req.body.coverType,
             totalPages: req.body.totalPages,
-            introduction: req.body.introduction,
-
+            introduction: req.body.introduction
         });
         console.log(book);
         book.save().then(addedBook => {
@@ -71,11 +87,10 @@ router.post(
                 message: "Add book successfully!",
                 book: {
                     ...addedBook._doc,
-                    id: addedBook._id,
+                    id: addedBook._id
                 }
             });
         });
-
     }
 );
 

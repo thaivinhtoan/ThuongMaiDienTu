@@ -8,9 +8,10 @@ import { BookDetailComponent } from './book/detail/book-detail.component';
 const routes: Routes = [
   { path: "", component: IntroductionComponent },
   { path: "home", component: IntroductionComponent },
+  { path: "product/:category", component: ProductListComponent },
   { path: "product", component: ProductListComponent },
   { path: "add", component: AddingBookComponent },
-  { path: "product/:id", component: BookDetailComponent },
+  { path: "product/book/:id", component: BookDetailComponent },
 ];
 
 @NgModule({
