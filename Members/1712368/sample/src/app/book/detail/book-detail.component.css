@@ -44,8 +44,9 @@
         }
         
         img {
-            border-style: inset;
-            border-width: 2px;
+            object-fit: contain;
+            width: 15rem;
+            height: 25rem;
         }
         
         .image {
