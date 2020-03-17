@@ -55,6 +55,17 @@ export class AddingBookComponent implements OnInit {
       }),
     });
   }
+  onImagePaste(event: ClipboardEvent) {
+    const file = event.clipboardData.files[0];
+    if (!file) return;
+    this.form.patchValue({ image: file });
+    this.form.get("image").updateValueAndValidity();
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.imagePreview = reader.result.toString();
+    };
+    reader.readAsDataURL(file);
+  }
   onImagePicked(event: Event) {
     const file = (event.target as HTMLInputElement).files[0];
     this.form.patchValue({ image: file });

@@ -36,6 +36,7 @@ export class BookDetailComponent implements OnInit {
                     introduction: book.introduction
                 };
                 console.log(this.book);
+                console.log(this.book.translator);
             });
         })
     }

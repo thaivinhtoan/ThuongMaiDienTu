@@ -1,11 +1,11 @@
 mat-card {
-    margin: 0.5rem;
+    border-radius: 10;
+    margin: 1rem;
 }
 
-.main {
-    height: 100%;
-    padding: 1rem;
-    background-color: #ecf0f1;
+mat-card-title {
+    margin-top: 1rem !important;
+    height: 4rem;
 }
 
 .price {
@@ -42,8 +42,15 @@ a {
 mat-drawer {
     background-color: #ffeaa7;
     width: 18%;
+    height: 100%;
 }
 
 mat-drawer-container {
-    height: 100%;
+    height: 43.3rem;
+    background-color: #ecf0f1;
+}
+
+img {
+    height: 17rem;
+    object-fit: contain;
 }

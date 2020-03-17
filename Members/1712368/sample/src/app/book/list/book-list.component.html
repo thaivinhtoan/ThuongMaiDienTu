@@ -6,23 +6,21 @@
         </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>
-        <div class="main">
-            <mat-grid-list cols="4" rowHeight="33rem">
-                <mat-grid-tile *ngFor="let book of books">
-                    <mat-card [routerLink]="['/product/book/', book.id]">
-                        <mat-card-header>
-                            <mat-card-title>{{book.name}}</mat-card-title>
-                            <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image [src]="book.imagePath">
-                        <div class="price">Giá bán: {{book.price.toLocaleString('vn')}} Đồng</div>
-                        <mat-card-actions align="center">
-                            <button mat-raised-button color="primary" [routerLink]="['/product/book/', book.id]">Thêm vào giỏ</button>
-                            <button mat-stroked-button color="primary" [routerLink]="['/product/book/', book.id]">Chi tiết</button>
-                        </mat-card-actions>
-                    </mat-card>
-                </mat-grid-tile>
-            </mat-grid-list>
-        </div>
+        <mat-grid-list cols="4" rowHeight="34rem">
+            <mat-grid-tile *ngFor="let book of books">
+                <mat-card [routerLink]="['/product/book/', book.id]">
+                    <mat-card-header>
+                        <mat-card-title>{{book.name}}</mat-card-title>
+                        <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image [src]="book.imagePath">
+                    <div class="price">Giá bán: {{book.price.toLocaleString('vn')}} Đồng</div>
+                    <mat-card-actions align="center">
+                        <button mat-raised-button color="primary" [routerLink]="['/product/book/', book.id]">Thêm vào giỏ</button>
+                        <button mat-stroked-button color="primary" [routerLink]="['/product/book/', book.id]">Chi tiết</button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
     </mat-drawer-content>
 </mat-drawer-container>

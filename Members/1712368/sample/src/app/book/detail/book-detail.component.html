@@ -3,64 +3,64 @@
         <table>
             <tr>
                 <td class="image">
-                    <img [src]="book.imagePath">
+                    <img [src]="book?.imagePath">
                 </td>
                 <td align="left">
                     <table>
                         <tr>
                             <th colspan="2">
-                                <span color="" class="title">{{book.name}}</span>
+                                <span color="" class="title">{{book?.name}}</span>
                             </th>
                         </tr>
                         <tr>
                             <td>
                                 <span>Nhà xuất bản: </span>
-                                <span class="primary">{{book.publisher}}</span>
+                                <span class="primary">{{book?.publisher}}</span>
                             </td>
                             <td>
                                 <span>Tác giả: </span>
-                                <span class="primary">{{book.author}}</span>
+                                <span class="primary">{{book?.author}}</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span>Thể loại: </span>
-                                <span class="primary">{{book.category}}</span>
+                                <span class="primary">{{book?.category}}</span>
                             </td>
-                            <td>
+                            <td *ngIf="book?.translator != 'null'">
                                 <span>Dịch giả: </span>
-                                <span class="primary">{{book.translator}}</span>
+                                <span class="primary">{{book?.translator}}</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span>Ngày xuất bản: </span>
-                                <span class="primary">{{book.publicationDate.toLocaleDateString()}}</span>
+                                <span class="primary">{{book?.publicationDate.toLocaleDateString()}}</span>
                             </td>
                             <td>
                                 <span>Kích thước: </span>
-                                <span class="primary">{{book.width}} x {{book.height}} cm</span>
+                                <span class="primary">{{book?.width}} x {{book?.height}} cm</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span>Loại bìa: </span>
-                                <span class="primary">{{book.coverType}}</span>
+                                <span class="primary">{{book?.coverType}}</span>
                             </td>
 
                             <td>
                                 <span>Số trang: </span>
-                                <span class="primary">{{book.totalPages}}</span>
+                                <span class="primary">{{book?.totalPages}}</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span>SKU: </span>
-                                <span class="primary">{{book.id}}</span>
+                                <span class="primary">{{book?.id}}</span>
                             </td>
                         </tr>
                         <tr>
-                            <td class="price">{{book.price.toLocaleString()}} Đồng</td>
+                            <td class="price">{{book?.price.toLocaleString()}} Đồng</td>
 
                         </tr>
                         <tr>
@@ -82,7 +82,7 @@
         </mat-card-header>
         <mat-card-content>
             <p>
-                {{book.introduction}}
+                {{book?.introduction}}
             </p>
         </mat-card-content>
     </mat-card>
