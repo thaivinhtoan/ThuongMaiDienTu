@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "nodemon server.js",
-    "postinstall": "ng build --aot --target=production"
+    "server": "nodemon server.js"
   },
   "private": true,
   "dependencies": {
@@ -31,8 +30,7 @@
     "multer": "^1.4.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "typescript": "~3.7.5"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.5",
@@ -53,10 +51,7 @@
     "nodemon": "^2.0.2",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
-    "tslint": "~5.18.0"
-  },
-  "engines": {
-    "node": "v12.16.1",
-    "npm": "6.13.4"
+    "tslint": "~5.18.0",
+    "typescript": "~3.7.5"
   }
 }
