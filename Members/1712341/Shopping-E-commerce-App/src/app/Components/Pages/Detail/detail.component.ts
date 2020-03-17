@@ -21,6 +21,7 @@ export class DetailComponent{
     SubService.getSubcate(this.CategoryId).subscribe(data=>{
       this.arrProducts = data;
       this.configPage = {
+        id: 'detailp',
         itemsPerPage: 3,
         currentPage: 1,
         totalItems: this.arrProducts.count
