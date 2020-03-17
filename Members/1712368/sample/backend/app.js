@@ -5,6 +5,11 @@ const bookRoutes = require("./routes/books");
 const categoryRoutes = require("./routes/categories");
 const mongoose = require("mongoose");
 const path = require("path");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/images", express.static(path.join("backend/images")));
+
 mongoose
     .connect(
         "mongodb+srv://meokg456:1Snr1zywA6p0wrTi@clustertest-pxawm.mongodb.net/book-store?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }
@@ -15,14 +20,6 @@ mongoose
     .catch(() => {
         console.log("Connection failed");
     });
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/images", express.static(path.join("backend/images")));
-
-const distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
-
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
