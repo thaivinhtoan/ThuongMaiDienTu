@@ -10,10 +10,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/images", express.static(path.join("backend/images")));
 
-var distDir = __dirname + "../dist/";
-console.log(distDir);
-app.use(express.static(distDir));
-
 mongoose
     .connect(
         "mongodb+srv://meokg456:1Snr1zywA6p0wrTi@clustertest-pxawm.mongodb.net/book-store?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }
