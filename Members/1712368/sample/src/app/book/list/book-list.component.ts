@@ -23,15 +23,25 @@ export class ProductListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.bookService.getCategories().subscribe(categoryData => {
       this.categories = categoryData.categories;
+      this.route.paramMap.subscribe((paramMap: ParamMap) => {
+        const category = paramMap.get('category');
+        if (category) {
+          if (category == "tat-ca")
+            this.titleService.setTitle("Tất cả");
+          this.bookService.getBooks(category);
+          this.categories.forEach(element => {
+            if (element.navigate == category) {
+              this.titleService.setTitle(element.name);
+            }
+          });
+        }
+        else {
+
+          this.router.navigate(['/product/tat-ca']);
+        }
+      })
     });
-    this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      const category = paramMap.get('category');
-      if (category) {
-        this.bookService.getBooks(category);
-      }
-      else
-        this.router.navigate(['/product/tat-ca']);
-    })
+
 
 
     this.bookSub = this.bookService.getBookUpdateListener().subscribe((books: Book[]) => {
