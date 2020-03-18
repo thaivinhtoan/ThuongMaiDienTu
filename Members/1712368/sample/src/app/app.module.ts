@@ -22,6 +22,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { ɵROUTER_PROVIDERS } from '@angular/router';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, IntroductionComponent, AddingBookComponent, ProductListComponent, BookDetailComponent],
   imports: [
@@ -44,7 +46,7 @@ import { MatTableModule } from '@angular/material/table';
     MatListModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

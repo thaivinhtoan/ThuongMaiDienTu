@@ -12,7 +12,7 @@ export class BookService {
   constructor(private http: HttpClient) { };
   private booksUpdated = new Subject<Book[]>();
   getBooks(category: string) {
-    this.http.get<{ message: string, books: any }>("https://book-store-1712368.herokuapp.com/api/books/" + category).pipe(map(bookData => {
+    this.http.get<{ message: string, books: any }>("/api/books/" + category).pipe(map(bookData => {
       return bookData.books.map(book => {
         const date = new Date(+book.publicationDate);
         console.log(date);
@@ -42,7 +42,7 @@ export class BookService {
 
   }
   getCategories() {
-    return this.http.get<{ message: string, categories: [] }>("https://book-store-1712368.herokuapp.com/api/categories");
+    return this.http.get<{ message: string, categories: [] }>("/api/categories");
   }
   getBook(bookId: string) {
     return this.http.get<{
@@ -60,7 +60,7 @@ export class BookService {
       coverType: string,
       totalPages: number,
       introduction: string
-    }>("https://book-store-1712368.herokuapp.com/api/books/book/" + bookId);
+    }>("/api/books/book/" + bookId);
   }
 
   getBookUpdateListener() {
@@ -85,7 +85,7 @@ export class BookService {
     bookData.append("coverType", coverType);
     bookData.append("totalPages", totalPages.toString(10));
     bookData.append("introduction", introduction);
-    this.http.post<{ message: string, book: Book }>("https://book-store-1712368.herokuapp.com/api/books", bookData).subscribe(responseData => {
+    this.http.post<{ message: string, book: Book }>("/api/books", bookData).subscribe(responseData => {
       console.log(responseData);
       const date = new Date(responseData.book.publicationDate);
       console.log(responseData.book);
