@@ -1,0 +1,26 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "toan",
+        "database": "aromadb",
+        "host": "localhost",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "postgres",
+        "password": "toan",
+        "database": "aromadb",
+        "host": "localhost",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "rqhybpehkcmnkn",
+        "password": "1621880366b4f4332e5a9bb9a08f077b7f5ebcf182996db68dd34d569d8f9c50",
+        "database": "d2hq4fnb2hs97o",
+        "host": "ec2-3-91-112-166.compute-1.amazonaws.com",
+        "dialect": "postgres",
+        "dialectOptions": {
+            "ssl": true
+        }
+    }
+}
