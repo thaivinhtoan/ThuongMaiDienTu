@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "book-store-1712368"
+  },
+  "targets": {
+    "book-store-1712368": {
+      "hosting": {
+        "sample": [
+          "book-store-1712368"
+        ]
+      }
+    }
+  }
+}
