@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="row">
+        <aside class="col-sm-5 border-right">
+            <article class="gallery-wrap">
+                <div class="img-big-wrap">
+                    <div>
+                        <img src="http://localhost:3000/upload/{{ DetailProduct[0].image}}">
+                    </div>
+                </div>
+            </article>
+        </aside>
+        <aside class="col-sm-7">
+            <article class="card-body p-5">
+                <h3 class="title mb-3">{{ DetailProduct[0].name}}</h3>
+
+                <p class="price-detail-wrap">
+                    <span class="price h3 text-warning">
+                        {{ DetailProduct[0].price}}
+                    </span>
+                </p>
+
+                <dl class="param param-feature">
+                    <dt>ViewRate</dt>
+                    <dd>{{ DetailProduct[0].viewRate}}</dd>
+                </dl>
+                <dl class="param param-feature">
+                    <dt>Order</dt>
+                    <dd>{{ DetailProduct[0].Order}}</dd>
+                </dl>
+            </article>
+        </aside>
+        <div class="col-sm-12" style="padding-top: 32px;">
+            <h6>Description</h6>
+            <p>{{ DetailProduct[0].description}}</p>
+        </div>
+    </div>
+</div>
