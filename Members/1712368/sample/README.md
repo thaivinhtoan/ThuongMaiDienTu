@@ -6,4 +6,4 @@
 
 ## Ghé thăm trang web:
 
-- [Book store](https://book-store-1712368.herokuapp.com)
+- [Book store](https://book-store-1712368.web.app)
