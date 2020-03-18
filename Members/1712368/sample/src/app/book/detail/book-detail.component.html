@@ -1,0 +1,89 @@
+<div class="main">
+    <mat-card>
+        <table>
+            <tr>
+                <td class="image">
+                    <img [src]="book?.imagePath">
+                </td>
+                <td align="left">
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                <span color="" class="title">{{book?.name}}</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Nhà xuất bản: </span>
+                                <span class="primary">{{book?.publisher}}</span>
+                            </td>
+                            <td>
+                                <span>Tác giả: </span>
+                                <span class="primary">{{book?.author}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Thể loại: </span>
+                                <span class="primary">{{book?.category}}</span>
+                            </td>
+                            <td *ngIf="book?.translator != 'null'">
+                                <span>Dịch giả: </span>
+                                <span class="primary">{{book?.translator}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Ngày xuất bản: </span>
+                                <span class="primary">{{book?.publicationDate.toLocaleDateString()}}</span>
+                            </td>
+                            <td>
+                                <span>Kích thước: </span>
+                                <span class="primary">{{book?.width}} x {{book?.height}} cm</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Loại bìa: </span>
+                                <span class="primary">{{book?.coverType}}</span>
+                            </td>
+
+                            <td>
+                                <span>Số trang: </span>
+                                <span class="primary">{{book?.totalPages}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>SKU: </span>
+                                <span class="primary">{{book?.id}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="price">{{book?.price.toLocaleString()}} Đồng</td>
+
+                        </tr>
+                        <tr>
+                            <mat-card-actions>
+                                <button mat-raised-button color="primary"><mat-icon>shopping_cart</mat-icon> Chọn mua</button>
+                                <button class="favorite" mat-icon-button color="primary">
+                                    <mat-icon>favorite</mat-icon>
+                                </button>
+                            </mat-card-actions>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </mat-card>
+    <mat-card class="introduction">
+        <mat-card-header>
+            <mat-card-title style="color: aliceblue;">Giới thiệu sách</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{book?.introduction}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

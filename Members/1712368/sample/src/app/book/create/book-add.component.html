@@ -1,0 +1,65 @@
+<div class="body" (paste)="onImagePaste($event)">
+    <mat-card>
+        <form [formGroup]="form" (submit)="onAddBook()">
+            <mat-form-field>
+                <input placeholder="Tên sách" matInput type="text" formControlName='name' />
+                <mat-error *ngIf="form.get('name').invalid">Vui lòng nhập tên sách</mat-error>
+
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button type="button" (click)="filePicker.click()">Pick image</button>
+                <input type="file" #filePicker (change)="onImagePicked($event)">
+            </div>
+            <div class="image-preview" *ngIf="imagePreview != '' && imagePreview && form.get('image').valid">
+                <img [src]="imagePreview" [alt]="form.value.name">
+            </div>
+            <mat-form-field>
+                <input placeholder="Tác giả" matInput type="text" formControlName='author' />
+                <mat-error *ngIf="form.get('author').invalid">Vui lòng nhập tên tác giả</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Thể loại" matInput type="text" formControlName='category' />
+                <mat-error *ngIf="form.get('category').invalid">Vui lòng nhập thể loại</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Dịch giả" matInput type="text" formControlName='translator' />
+                <mat-error *ngIf="form.get('translator').invalid">Vui lòng nhập tên dịch giả</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Giá bán" matInput type="number" formControlName='price' />
+                <mat-error *ngIf="form.get('price').invalid">Vui lòng nhập giá bán</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Nhà xuất bản" matInput type="text" formControlName='publisher' />
+                <mat-error *ngIf="form.get('publisher').invalid">Vui lòng nhập tên tác giả</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Ngày xuất bản" matInput type="date" formControlName='publicationDate' />
+                <mat-error *ngIf="form.get('publicationDate').invalid">Vui lòng nhập ngày xuất bản</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Chiều cao" matInput type="number" formControlName='height' />
+                <mat-error *ngIf="form.get('height').invalid">Vui lòng nhập chiều cao</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Chiều ngang" matInput type="number" formControlName='width' />
+                <mat-error *ngIf="form.get('width').invalid">Vui lòng nhập chiều ngang</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Loại bìa" matInput type="text" formControlName='coverType' />
+                <mat-error *ngIf="form.get('coverType').invalid">Vui lòng nhập loại bìa</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input placeholder="Số trang" matInput type="number" formControlName='totalPages' />
+                <mat-error *ngIf="form.get('totalPages').invalid">Vui lòng nhập số trang</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea placeholder="Giới thiệu sách" matInput rows="6" formControlName='introduction'></textarea>
+                <mat-error *ngIf="form.get('introduction').invalid">Vui lòng nhập giới thiệu sách</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">
+      Add book
+    </button>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,16 @@
+.brand {
+    margin: 5rem;
+    font-size: xx-large;
+}
+
+span {
+    padding: 1rem;
+}
+
+a {
+    font-size: large;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

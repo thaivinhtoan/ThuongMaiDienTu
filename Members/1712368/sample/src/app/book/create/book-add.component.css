@@ -1,0 +1,29 @@
+mat-form-field {
+    width: 100%;
+}
+
+.body {
+    background-image: url("../../home/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    padding: 2rem;
+}
+
+mat-card {
+    width: 70%;
+    margin: auto;
+}
+
+input[type="file"] {
+    visibility: hidden;
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+}
+
+.image-preview img {
+    height: 100%;
+}
