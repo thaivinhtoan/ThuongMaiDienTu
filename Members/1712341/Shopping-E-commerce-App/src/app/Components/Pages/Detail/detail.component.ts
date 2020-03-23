@@ -22,7 +22,7 @@ export class DetailComponent{
       this.arrProducts = data;
       this.configPage = {
         id: 'detailp',
-        itemsPerPage: 3,
+        itemsPerPage: 4,
         currentPage: 1,
         totalItems: this.arrProducts.count
       };

@@ -285,10 +285,12 @@ app.post("/api/detailPro/:idSubCate", function(req, res) {
 
 app.post("/api/search/:searchString", function(req, res) {
     var searchString = req.params.searchString;
+    console.log(searchString);
     SubCategory.find({ name: { "$regex": searchString, "$options": "i" } }, function(err, el) {
         if (err) {
             res.json({ result: 0, "err": err });
         } else {
+            console.log(el);
             res.json(el);
         }
     });

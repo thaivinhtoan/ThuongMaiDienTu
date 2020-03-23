@@ -8,10 +8,5 @@ import { CategoryService } from '../../../Services/category.module';
 })
 
 export class MenuComponent{
-  arrCate;
-  constructor( private cateService: CategoryService ){
-    cateService.getCategory().subscribe(data=>{    // subscribe: chờ cho getCategory() chạy xong mới được xử lý tiếp kết quả
-      this.arrCate=(data);
-    });
-  }
+
 }
