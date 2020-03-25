@@ -1,24 +1,20 @@
-<!-- <h2>{{CategoryName}}</h2> -->
-<div class="row">
-
-    <div class="col-md-4" *ngFor="let prd of arrProducts | paginate: configPage">
-        <figure class="card card-product ">
-            <div class="img-wrap " style="min-height: 100px "><img src="http://localhost:3000/upload/{{ prd.image }} "></div>
-            <figcaption class="info-wrap " style="min-height: 80px ">
-                <h4 class="title " style="text-align: center ">
-                    <a href="/detailPro/{{ prd._id}} ">
-                      {{ prd.name }}
-                    </a>
-                </h4>
-            </figcaption>
-            <div class="bottom-wrap " style='text-align: center; background-color: #4a84ec'>
-                <div class="price-wrap h5 ">
-                    <span class="price-new ">{{ prd.price }}</span>
-                </div>
+<section class="main-content">
+    <div class="row">
+        <div class="span12">
+            <ul class="thumbnails listing-products">
+                <li class="span3" *ngFor="let prd of arrProducts | paginate: configPage">
+                    <div class="product-box">
+                        <span class="sale_tag"></span>
+                        <a href="/detailPro/{{ prd._id}}"><img style="height: 270px" src="http://localhost:3000/upload/{{ prd.image }} "></a><br/>
+                        <a href="/detailPro/{{ prd._id}} " class="title">{{ prd.name }}</a><br/>
+                        <p class="price">{{ prd.price }}</p>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+            <div class="pagination pagination-small pagination-centered ngx-pagination .current">
+                <pagination-controls id="detailp" (pageChange)="pageChanged($event)"></pagination-controls>
             </div>
-        </figure>
+        </div>
     </div>
-    <div class="card-footer pb-0 pt-3 col-md-12" style="text-align: center">
-        <pagination-controls id="detailp" (pageChange)="pageChanged($event)"></pagination-controls>
-    </div>
-</div>
+</section>

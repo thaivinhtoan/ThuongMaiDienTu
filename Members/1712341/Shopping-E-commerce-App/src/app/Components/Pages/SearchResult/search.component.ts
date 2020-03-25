@@ -17,12 +17,13 @@ export class SearchComponent{
   constructor( private SearchService: SearchService, private route: ActivatedRoute ){
     this.route.queryParamMap.subscribe(params => {
       this.stringSearch = params.get('product');
+      console.log(this.stringSearch);
     });
     SearchService.getProduct(this.stringSearch).subscribe(data=>{    // subscribe: chờ cho getCategory() chạy xong mới được xử lý tiếp kết quả
       this.arrProducts = data;
       this.configPage = {
         id: 'pSearch',
-        itemsPerPage: 3,
+        itemsPerPage: 4,
         currentPage: 1,
         totalItems: this.arrProducts.count
       };
@@ -31,5 +32,4 @@ export class SearchComponent{
   pageChanged(event){
     this.configPage.currentPage = event;
   }
-
 }

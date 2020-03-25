@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+declare var $: any;
+
 
 @Component({
   templateUrl: 'slider.component.html',
@@ -6,6 +8,21 @@ import { Component } from '@angular/core';
 
 })
 
-export class SliderComponent{
+export class SliderComponent implements OnInit{
+
+  ngOnInit() {
+    $(function() {
+      $(document).ready(function() {
+          $('.flexslider').flexslider({
+              animation: "fade",
+              slideshowSpeed: 4000,
+              animationSpeed: 600,
+              controlNav: false,
+              directionNav: true,
+              controlsContainer: ".flex-container" // the container that holds the flexslider
+          });
+      });
+  });
+}
 
 }
