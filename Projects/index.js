@@ -1,40 +1,49 @@
-const express = require('express');
+let express = require('express');
+let app = express();
 
-
-app = express();
-
-// set public static folder
-
+//Set public static folder
 app.use(express.static(__dirname + '/public'));
 
-// use view engine
-const expressHbs = require('express-handlebars');
-const hbs = expressHbs.create({
+//use view engine
+let expressHbs = require('express-handlebars');
+let hbs = expressHbs.create({
     extname: 'hbs',
     defaultLayout: 'layout',
     layoutsDir: __dirname + '/views/layouts',
-    partialsDir: __dirname + '/views/partials',
+    partialsDir: __dirname + '/views/partials'
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
-
-//define your root hear
+//define your routes  here
 app.get('/', (req, res) => {
     res.render('index');
 });
 
+
+app.get('/sync', (req, res) => {
+    let models = require('./models');
+    models.sequelize.sync()
+        .then(() => {
+            res.send('database sync completed!')
+        });
+});
+
+
 app.get('/:page', (req, res) => {
-    const banners = {
-        blog: 'Our blog',
-        category: 'Category',
-        cart: 'Shopping cart',
-        checkout: 'checkout',
-        confirmation: 'confirmation',
-        contact: 'contact',
-        login: 'login',
-        register: 'register',
+    let banners = {
+        blog: 'Our Blog',
+        category: 'Shop Category',
+        cart: 'Shopping Cart',
+        checkout: 'Product Checkout',
+        confirmation: 'Order Confirmation',
+        contact: 'Contact Us',
+        index: '',
+        login: 'Login / Register',
+        register: 'Register',
+       
+
     };
-    const page = req.params.page;
+    let page = req.params.page;
     res.render(page, { banner: banners[page] });
 });
 
@@ -74,9 +83,9 @@ app.get('/tracking-order', (req, res) => {
     res.render('tracking-order');
 });
 
-// set server port and start serve
-app.set('port', process.env.PORT || 5000);
 
+// set server port @ start server
+app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), () => {
-    console.log(`Server is running at port ${app.get('port')}`);
+    console.log(`Server is running at port ${app.get('port')}`)
 });
