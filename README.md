@@ -2,17 +2,22 @@
 
 # NHÓM 20B01
 
-- Gồm các thành viên:
+#Database
+Bước 1:
+Download PostgreSQL 
+Tạo Database tên: aromadb
 
-- 1612687 - Nguyễn Thị Mỹ Tiên
-- 1712341 - Phan Thị Mỹ Diễm
-- 1712368 - Nguyễn Hữu Dũng
-- 1712824 - Thái Vĩnh Toàn
-- 1712828 - Huỳnh Thanh khải Trân
+Bước 2:
+Teminal chạy câu lệnh:
+npm install -s pg pg-hstore 
+npm install -g squelize siquelize-cli
 
+Bước 3: 
+Chạy project và chạy đường dẫn 
+locallhost:5000/sync
 
-- Trong Thư Mục Bao gồm
+Bước 4:
+Teminal chạy câu lệnh
+sequelize db:seed:all
 
-- Project: Chứa src của các project thực hiện trong khóa học.
-- Members: Chứa các folder theo mã số sinh viên để làm các bài tập cá nhân.
-- Project_Report: Chứa các report của các project nhóm
+Note: vào file config.jison để đổi lại mật khẩu của postgre
