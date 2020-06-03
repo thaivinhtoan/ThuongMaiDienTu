@@ -1,0 +1,24 @@
+npm install -s pg pg-hstore sequelize sequelize-cli
+
+sequelize init
+
+(xóa file models. config, miration, seedercũ)
+
+sửa file config: đổi tên database
+
+sequelize db:seed:all
+
+lỗi Access has been denied to resolve the property “from” because it is not an “own property” of its parent:
+link issue: https://github.com/handlebars-lang/handlebars.js/issues/1648#issuecomment-582241258
+ 
+<<scrip neu muon tao lai database tu dau>>
+<< tao model >> 
+sequelize model:generate --name Category --attributes name:string,summary:text,imagepath:text
+
+sequelize model:generate --name Course --attributes name:string,price:decimal,summary:text,description:text,availability:boolean,imagepath:text,thumbnailPath:text,overallReview:double,reviewCount:integer
+
+<< tao seeder >> 
+sequelize seed:generate --name demo-category
+sequelize seed:generate --name demo-course
+
+
