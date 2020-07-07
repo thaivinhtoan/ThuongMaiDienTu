@@ -13,14 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Course.associate = function(models) {
         // associations can be defined here
-        Course.belongsTo(models.Teacher, { foreignKey: 'teacherId' });
+
         Course.belongsTo(models.Category, { foreignKey: 'categoryId' });
-        Course.hasMany(models.CourseLevel, { foreignKey: 'courseId' });
-        Course.hasMany(models.CourseSpecification, { foreignKey: 'courseId' });
-        Course.hasMany(models.Comment, { foreignKey: 'courseId' });
-        Course.hasMany(models.Review, { foreignKey: 'courseId' });
-        Course.hasMany(models.ContentCourse, { foreignKey: 'courseId' });
-        Course.hasMany(models.CodeCourse, { foreignKey: 'courseId' });
+
     };
     return Course;
 };

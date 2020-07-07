@@ -10,7 +10,7 @@ Tạo Database tên: aromadb
 Bước 2:
 Teminal chạy câu lệnh:
 npm install -s pg pg-hstore 
-npm install -g squelize siquelize-cli
+npm install -g sequelize sequelize-cli
 
 Bước 3: 
 Chạy project và chạy đường dẫn 
