@@ -43,12 +43,32 @@ controller.getById = (id) => {
             .then(result => {
                 course = result;
                 return models.CourseSpecification.findAll({
-                    where: { CourseId: id },
+                    where: { courseId: id },
                     include: [{ model: models.Specification }]
                 });
             })
             .then(courseSpecification => {
-                course.CourseSpecifications = courseSpecifications;
+                course.CourseSpecifications = courseSpecification;
+                return models.Comment.findAll({
+                    where: { courseId: id, parentCommentId: null },
+                    include: [{ model: models.User },
+                        {
+                            model: models.Comment,
+                            as: 'SubComments',
+                            include: [{ model: models.User }]
+                        }
+                    ]
+                });
+            })
+            .then(comments => {
+                course.Comments = comments;
+                return models.Review.findAll({
+                    where: { courseId: id },
+                    include: [{ model: models.User }]
+                });
+            })
+            .then(reviews => {
+                course.Reviews = reviews;
                 resolve(course);
             })
             .catch(error => reject(new Error(error)));

@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     CourseSpecification.associate = function(models) {
         // associations can be defined here
         CourseSpecification.belongsTo(models.Specification, { foreignKey: 'specificationId' });
-        CourseSpecification.belongsTo(models.Course, { foreignKey: 'CourseId' });
+        CourseSpecification.belongsTo(models.Course, { foreignKey: 'courseId' });
     };
     return CourseSpecification;
 };
