@@ -1,17 +1,23 @@
 let express = require('express');
 let router = express.Router();
 
-/* đang nghĩ cách chèn mỗi bài học học 1 link video nhúng*/
-
 router.get('/', (req, res, next) => {
-
+    if ((req.query.category == null) || isNaN(req.query.category)) {
+        req.query.category = 0;
+    }
+    if ((req.query.min == null) || isNaN(req.query.min)) {
+        req.query.min = 0;
+    }
+    if ((req.query.max == null) || isNaN(req.query.max)) {
+        req.query.max = 100;
+    }
     let categoryController = require('../controllers/categoryController');
     categoryController
         .getAll()
         .then(data => {
             res.locals.Categories = data;
             let courseController = require('../controllers/productController');
-            return courseController.getAll();
+            return courseController.getAll(req.query);
         })
         .then(data => {
             res.locals.courses = data;
@@ -34,6 +40,7 @@ router.get('/:id', (req, res, next) => {
 
 });
 
+/* đang nghĩ cách chèn mỗi bài học học 1 link video nhúng*/
 // router.get('/:id/link', (req, res, next) => {
 //     res.redirect('https://youtu.be/QH2-TGUlwu4');
 

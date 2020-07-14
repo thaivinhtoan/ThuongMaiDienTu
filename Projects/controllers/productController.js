@@ -1,6 +1,8 @@
 let controller = {};
 let models = require('../models');
-let Course = models.Course
+let Course = models.Course;
+let Sequelize = require('sequelize');
+let Op = Sequelize.Op;
 
 //get trending products
 controller.getTrendingCourses = () => {
@@ -20,13 +22,23 @@ controller.getTrendingCourses = () => {
 };
 
 // get all products
-controller.getAll = () => {
+controller.getAll = (query) => {
     return new Promise((resolve, reject) => {
+        let options = {
+            include: [{ model: models.Category }],
+            attributes: ['id', 'name', 'price', 'imagepath'],
+            where: {
+                price: {
+                    [Op.gte]: query.min,
+                    [Op.lte]: query.max
+                }
+            }
+        };
+        if (query.category > 0) {
+            options.where.categoryId = query.category;
+        }
         Course
-            .findAll({
-                include: [{ model: models.Category }],
-                attributes: ['id', 'name', 'price', 'imagepath']
-            })
+            .findAll(options)
             .then(data => resolve(data))
             .catch(error => reject(new Error(error)));
     });
@@ -69,6 +81,11 @@ controller.getById = (id) => {
             })
             .then(reviews => {
                 course.Reviews = reviews;
+                let stars = [];
+                for (let i = 1; i <= 5; i++) {
+                    stars.push(reviews.filter(item => (item.rating == i)).length);
+                }
+                course.stars = stars;
                 resolve(course);
             })
             .catch(error => reject(new Error(error)));

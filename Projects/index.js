@@ -9,11 +9,16 @@ app.use(express.static(__dirname + '/public'));
 
 //use view engine
 let expressHbs = require('express-handlebars');
+let helper = require('./controllers/helper');
 let hbs = expressHbs.create({
     extname: 'hbs',
     defaultLayout: 'layout',
     layoutsDir: __dirname + '/views/layouts/',
     partialsDir: __dirname + '/views/partials/',
+    helpers: {
+        createStarList: helper.createStarList,
+        createStars: helper.createStars
+    },
     handlebars: allowInsecurePrototypeAccess(Handlebars)
 });
 app.engine('hbs', hbs.engine);
@@ -22,6 +27,15 @@ app.set('view engine', 'hbs');
 // /=> index 
 // /products => category
 // /prodocts//:id => single product
+
+var bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 app.use('/', require('./routes/indexRouter'));
 app.use('/courses', require('./routes/productRouter'));
 app.use('/users', require('./routes/userRouter'));

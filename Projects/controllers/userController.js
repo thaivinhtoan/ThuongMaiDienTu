@@ -3,12 +3,12 @@ let models = require('../models');
 let User = models.User;
 let bcrypt = require('bcryptjs');
 
-// controller.getUserByEmail = (email) => {
-//     return User.finOne({
-//         where: { username: email }
-//     });
+controller.getUserByEmail = (email) => {
+    return User.findOne({
+        where: { username: email }
+    });
 
-// };
+};
 
 controller.createUser = (user) => {
     var salt = bcrypt.genSaltSync(10);

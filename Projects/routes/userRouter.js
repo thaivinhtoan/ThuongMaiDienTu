@@ -13,13 +13,13 @@ router.get('/register', (req, res) => {
 
 router.post('/register', (req, res, next) => {
     let fullname = req.body.fullname;
-    let username = req.body.username;
+    let email = req.body.username;
     let password = req.body.password;
     let confirmPassword = req.body.confirmPassword;
     let keepLogedIn = (req.body.keepLogedIn != undefined);
 
     //kiem tra confrirmPassword va Password giong nhau
-    if (user.password != confirmPassword) {
+    if (password != confirmPassword) {
         return res.render = ('register', {
             message: 'confirmPassword does not match password!',
             type: 'alert-danger'
@@ -27,15 +27,20 @@ router.post('/register', (req, res, next) => {
     }
     //kiem tra username chua ton tai
     userController
-        .getUserByEmail(user.username)
+        .getUserByEmail(email)
         .then(user => {
             if (user) {
                 return res.render('register', {
-                    message: `Email exists ${user.username}! Please use another Email Address!`,
+                    message: `Email exists ${email}! Please use another Email Address!`,
                     type: 'alert-danger'
                 });
             }
             //tao tai khoan
+            user = {
+                fullname,
+                username: email,
+                password
+            }
             return userController
                 .createUser(user)
                 .then(user => {
