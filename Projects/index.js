@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 //use view engine
 let expressHbs = require('express-handlebars');
 let helper = require('./controllers/helper');
+let paginateHealper = require('express-handlebars-paginate');
 let hbs = expressHbs.create({
     extname: 'hbs',
     defaultLayout: 'layout',
@@ -17,7 +18,8 @@ let hbs = expressHbs.create({
     partialsDir: __dirname + '/views/partials/',
     helpers: {
         createStarList: helper.createStarList,
-        createStars: helper.createStars
+        createStars: helper.createStars,
+        createPagination: paginateHealper.createPagination
     },
     handlebars: allowInsecurePrototypeAccess(Handlebars)
 });

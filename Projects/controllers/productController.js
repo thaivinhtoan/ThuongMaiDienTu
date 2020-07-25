@@ -23,6 +23,7 @@ controller.getTrendingCourses = () => {
 
 // get all products
 controller.getAll = (query) => {
+    // console.log(query)
     return new Promise((resolve, reject) => {
         let options = {
             include: [{ model: models.Category }],
@@ -37,8 +38,43 @@ controller.getAll = (query) => {
         if (query.category > 0) {
             options.where.categoryId = query.category;
         }
+        //search 
+        // if (query.search != '') {
+        //     options.where.name = {
+        //         [Op.islike]: `%${query.search}%`
+        //     }
+        // }
+        //phan trang
+        if (query.limit > 0) {
+            options.limit = query.limit;
+            options.offset = query.limit * (query.page - 1);
+        }
+        // sort
+        if (query.sort) {
+            switch (query.sort) {
+                case 'name':
+                    options.order = [
+                        ['name', 'ASC']
+                    ];
+                    break;
+                case 'price':
+                    options.order = [
+                        ['price', 'ASC']
+                    ];
+                    break;
+                case 'overallReview':
+                    options.order = [
+                        ['overallReview', 'DESC']
+                    ];
+                    break;
+                default:
+                    options.order = [
+                        ['name', 'ASC']
+                    ];
+            }
+        }
         Course
-            .findAll(options)
+            .findAndCountAll(options) // tra ve rows, count
             .then(data => resolve(data))
             .catch(error => reject(new Error(error)));
     });
