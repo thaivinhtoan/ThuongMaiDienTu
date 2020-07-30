@@ -1,6 +1,7 @@
 <script src="/vendors/nouislider/nouislider.min.js"></script>
 {{> banner}}
 
+<<<<<<< create_database
 <!-- ================ category section start ================= -->
 <section class="section-margin--small mb-5">
   <div class="container">
@@ -67,6 +68,67 @@
                 <div class="to">to</div>
                 <span>$</span>
                 <div id="upper-value"></div>
+=======
+	<!-- ================ category section start ================= -->		  
+  <section class="section-margin--small mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-5">
+          <div class="sidebar-categories">
+            <div class="head">Browse Categories</div>
+            <ul class="main-categories">
+              <li class="common-filter">
+                <form action="#">
+                  <ul>
+                    {{#each Categories}}
+                    <li class="filter-list"><input class="pixel-radio" 
+                    type="radio" id="category{{id}}" name="category"><label 
+                    for="category{{id}}" onclick="selectParam('category', {{id}}), true">{{name}}<span> ({{Courses.length}})</span></label></li>
+                    {{/each}}
+                  </ul>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-filter">
+            <div class="top-filter-head">Course Filters</div>
+            <div class="common-filter">
+              <div class="head">Teachers</div>
+              <form action="#">
+                <ul>
+                  {{#each teachers}}
+                  <li class="filter-list"><input class="pixel-radio" 
+                  type="radio" id="teacher{{id}}" name="teacher" onclick="selectParam('teacher', {{id}})">
+                  <label for="teacher{{id}}">{{name}}<span>({{Courses.length}})</span></label></li>
+                  {{/each}}
+                </ul>
+              </form>
+            </div>
+            <div class="common-filter">
+              <div class="head">Level</div>
+              <form action="#">
+                <ul>
+                  {{#each levels}}
+                  <li class="filter-list"><input class="pixel-radio" 
+                  type="radio" id="level{{id}}" name="level" onclick="selectParam('level', {{id}})" >
+                  <label for="level{{id}}">{{name}}<span>({{CourseLevels.length}})</span></label></li>
+                  {{/each}}
+                </ul>
+              </form>
+            </div>
+            <div class="common-filter">
+              <div class="head">Price</div>
+              <div class="price-range-area">
+                <div id="price-range"></div>
+                <div class="value-wrapper d-flex">
+                  <div class="price">Price:</div>
+                  <span>$</span>
+                  <div id="lower-value"></div>
+                  <div class="to">to</div>
+                  <span>$</span>
+                  <div id="upper-value"></div>
+                </div>
+>>>>>>> [update] Building Browse + Filter Functionalities for E-learning  web application
               </div>
             </div>
           </div>
@@ -285,6 +347,11 @@
   let urlparams = new URLSearchParams(location.search);
   let params = {
     category: 0,
+<<<<<<< create_database
+=======
+    teacher: 0,
+    level: 0,
+>>>>>>> [update] Building Browse + Filter Functionalities for E-learning  web application
     min: 0,
     max: 100,
     limit: 9,
