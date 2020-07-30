@@ -1,7 +1,6 @@
 let express = require('express');
 let app = express();
 
-
 //set public static folder
 const Handlebars = require('handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
@@ -30,18 +29,37 @@ app.set('view engine', 'hbs');
 // /products => category
 // /prodocts//:id => single product
 
-var bodyParser = require('body-parser')
+// Use Body Parser
+let bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+// Use Cookie Parser
+let cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
-// parse application/json
-app.use(bodyParser.json())
+// Use Session
+let session = require('express-session');
+app.use(session({
+    cookie: { httpOnly: true, maxAge: 30 * 24 * 60 * 60 * 1000 },
+    secret: '53cret',
+    resave: false,
+    saveUninitialized: false
+}));
+
+// Use Cart Controller
+let Cart = require('./controllers/cartController');
+app.use((req, res, next) => {
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+    req.session.cart = cart;
+    res.locals.totalQuantity = cart.totalQuantity;
+    next();
+});
 
 app.use('/', require('./routes/indexRouter'));
 app.use('/courses', require('./routes/productRouter'));
 app.use('/users', require('./routes/userRouter'));
-//app.use('/demosanpham',require('.routes/linkRouter')); // chưa chạy được 
+app.use('/cart', require('./routes/cartRouter'));
 
 app.get('/sync', (req, res) => {
     let models = require('./models');

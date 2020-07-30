@@ -83,8 +83,8 @@
             </select>
           </div>
           <div>
-            <div class="input-group filter-bar-search">
               <form action="/courses" method="GET">
+            <div class="input-group filter-bar-search">
                 <input type="text" name="search" placeholder="Search">
                 <div class="input-group-append">
                   <button type="submit"><i class="ti-search"></i></button>
@@ -99,21 +99,7 @@
           <div class="row">
             {{#each courses}}
             <div class="col-md-6 col-lg-4">
-              <div class="card text-center card-product">
-                <div class="card-product__img">
-                  <img class="card-img" src="{{ imagepath }}" alt="">
-                  <ul class="card-product__imgOverlay">
-                    <li><button><i class="ti-search"></i></button></li>
-                    <li><button><i class="ti-shopping-cart"></i></button></li>
-                    <li><button><i class="ti-heart"></i></button></li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <p>{{Category.name}}</p>
-                  <h4 class="card-product__title"><a href="/courses/{{id}}">{{ name }}</a></h4>
-                  <p class="card-product__price">${{ price }}</p>
-                </div>
-              </div>
+              {{> product}}
             </div>
             {{/each}}
           </div>
@@ -297,7 +283,7 @@
   $(document).ready(() => {
     //thiet lap trang thai cho cacs checkboxes cua browse va filter
     let checkboxes = ['category', 'teacher', 'level'];
-    for (let key in checkboxes) {
+    for (let key of checkboxes) {
       let control = $(`#${key}${urlparams.get(key)}`);
       if (control) {
         $(control).prop('checked', true);
