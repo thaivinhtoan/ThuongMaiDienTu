@@ -38,6 +38,7 @@ controller.getAll = (query) => {
         if (query.category > 0) {
             options.where.categoryId = query.category;
         }
+<<<<<<< create_database
         //search 
         // if (query.search != '') {
         //     options.where.name = {
@@ -72,6 +73,17 @@ controller.getAll = (query) => {
                         ['name', 'ASC']
                     ];
             }
+=======
+        if (query.teacher > 0) {
+            options.where.teacherId = query.teacher;
+        }
+        if (query.level > 0) {
+            options.include.push({
+                model: models.CourseLevel,
+                attributes: [],
+                where: { levelId: query.level }
+            });
+>>>>>>> [update] Building Browse + Filter Functionalities for E-learning  web application
         }
         Course
             .findAndCountAll(options) // tra ve rows, count

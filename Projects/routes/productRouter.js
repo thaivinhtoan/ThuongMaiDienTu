@@ -5,6 +5,12 @@ router.get('/', (req, res, next) => {
     if ((req.query.category == null) || isNaN(req.query.category)) {
         req.query.category = 0;
     }
+    if ((req.query.teacher == null) || isNaN(req.query.teacher)) {
+        req.query.teacher = 0;
+    }
+    if ((req.query.level == null) || isNaN(req.query.level)) {
+        req.query.level = 0;
+    }
     if ((req.query.min == null) || isNaN(req.query.min)) {
         req.query.min = 0;
     }
@@ -28,6 +34,16 @@ router.get('/', (req, res, next) => {
         .getAll(req.query)
         .then(data => {
             res.locals.Categories = data;
+            let teacherController = require('../controllers/teacherController');
+            return teacherController.getAll(req.query);
+        })
+        .then(data => {
+            res.locals.teachers = data;
+            let levelController = require('../controllers/levelController');
+            return levelController.getAll(req.query);
+        })
+        .then(data => {
+            res.locals.levels = data;
             let courseController = require('../controllers/productController');
             console.log(req.query)
             return courseController.getAll(req.query);
@@ -53,6 +69,10 @@ router.get('/:id', (req, res, next) => {
             res.render('single-product');
         })
         .catch(error => next(error));
+<<<<<<< create_database
+=======
+
+>>>>>>> [update] Building Browse + Filter Functionalities for E-learning  web application
 });
 
 /* đang nghĩ cách chèn mỗi bài học học 1 link video nhúng*/
