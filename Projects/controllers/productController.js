@@ -37,6 +37,11 @@ controller.getAll = (query) => {
         if (query.category > 0) {
             options.where.categoryId = query.category;
         }
+        if (query.search != '') {
+            options.where.name = {
+                [Op.iLike]: `%${query.search}%`
+            }
+        }
         if (query.teacher > 0) {
             options.where.teacherId = query.teacher;
         }
@@ -47,8 +52,38 @@ controller.getAll = (query) => {
                 where: { levelId: query.level }
             });
         }
+        // Pagination
+        if (query.limit > 0) {
+            options.limit = query.limit;
+            options.offset = query.limit * (query.page - 1);
+        }
+        // Sort
+        if (query.sort) {
+            switch (query.sort) {
+                case 'name':
+                    options.order = [
+                        ['name', 'ASC']
+                    ];
+                    break;
+                case 'price':
+                    options.order = [
+                        ['price', 'ASC']
+                    ];
+                    break;
+                case 'overallReview':
+                    options.order = [
+                        ['overallReview', 'DESC']
+                    ];
+                    break;
+                default:
+                    options.order = [
+                        ['name', 'ASC']
+                    ];
+
+            }
+        }
         Course
-            .findAll(options)
+            .findAndCountAll(options)
             .then(data => resolve(data))
             .catch(error => reject(new Error(error)));
     });
