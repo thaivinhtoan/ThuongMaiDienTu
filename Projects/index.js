@@ -60,6 +60,8 @@ app.use('/', require('./routes/indexRouter'));
 app.use('/courses', require('./routes/productRouter'));
 app.use('/users', require('./routes/userRouter'));
 app.use('/cart', require('./routes/cartRouter'));
+app.use('/comments', require('./routes/commentRouter'));
+app.use('/reviews', require('./routes/reviewRouter'));
 
 app.get('/sync', (req, res) => {
     let models = require('./models');
