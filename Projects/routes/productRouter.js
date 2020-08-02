@@ -66,7 +66,10 @@ router.get('/:id', (req, res, next) => {
         .then(course => {
             res.locals.course = course;
             let reviewController = require('../controllers/reviewController');
-            return reviewController.getUserReviewCourse(1, req.params.id);
+            return reviewController.getUserReviewCourse(
+                req.session.user ? req.session.user.id : 0,
+                req.params.id
+            );
         })
         .then(review => {
             res.locals.userReview = review;

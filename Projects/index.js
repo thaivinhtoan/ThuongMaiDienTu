@@ -41,7 +41,7 @@ app.use(cookieParser());
 // Use Session
 let session = require('express-session');
 app.use(session({
-    cookie: { httpOnly: true, maxAge: 30 * 24 * 60 * 60 * 1000 },
+    cookie: { httpOnly: true, maxAge: null },
     secret: '53cret',
     resave: false,
     saveUninitialized: false
@@ -53,6 +53,8 @@ app.use((req, res, next) => {
     var cart = new Cart(req.session.cart ? req.session.cart : {});
     req.session.cart = cart;
     res.locals.totalQuantity = cart.totalQuantity;
+    res.locals.fullname = req.session.user ? req.session.user.fullname : '';
+    res.locals.isLoggedIn = req.session.user ? true : false;
     next();
 });
 
