@@ -309,7 +309,7 @@ module.exports = {
                 imagepath: '/img/product/product22.png',
                 thumbnailPath: '/img/product/product-sm-3.png',
                 teacherId: 2,
-                categoryId: 2,
+                categoryId: 3,
                 reviewCount: 4,
                 overallReview: 3.67
             },
@@ -438,7 +438,7 @@ module.exports = {
             imagepath: '/img/product/product31.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 1,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -452,7 +452,7 @@ module.exports = {
             imagepath: '/img/product/product32.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 2,
-            categoryId: 2,
+            categoryId: 4,
             reviewCount: 4,
             overallReview: 3.67
         },
@@ -466,7 +466,7 @@ module.exports = {
             imagepath: '/img/product/product33.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 3,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 5,
             overallReview: 4.67
         },
@@ -481,7 +481,7 @@ module.exports = {
             imagepath: '/img/product/product34.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 4,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 2,
             overallReview: 2.67
         },
@@ -495,7 +495,7 @@ module.exports = {
             imagepath: '/img/product/product35.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 5,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -509,7 +509,7 @@ module.exports = {
             imagepath: '/img/product/product36.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 1,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -523,7 +523,7 @@ module.exports = {
             imagepath: '/img/product/product37.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 2,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 4,
             overallReview: 3.67
         },
@@ -537,7 +537,7 @@ module.exports = {
             imagepath: '/img/product/product38.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 3,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 5,
             overallReview: 4.67
         },
@@ -552,7 +552,7 @@ module.exports = {
             imagepath: '/img/product/product39.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 4,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 2,
             overallReview: 2.67
         },
@@ -566,7 +566,7 @@ module.exports = {
             imagepath: '/img/product/product40.png',
             thumbnailPath: '/img/product/product-sm-4.png',
             teacherId: 5,
-            categoryId: 3,
+            categoryId: 4,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -580,7 +580,7 @@ module.exports = {
             imagepath: '/img/product/product41.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 1,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -594,7 +594,7 @@ module.exports = {
             imagepath: '/img/product/product42.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 2,
-            categoryId: 2,
+            categoryId: 5,
             reviewCount: 4,
             overallReview: 3.67
         },
@@ -608,7 +608,7 @@ module.exports = {
             imagepath: '/img/product/product43.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 3,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 5,
             overallReview: 4.67
         },
@@ -623,7 +623,7 @@ module.exports = {
             imagepath: '/img/product/product44.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 4,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 2,
             overallReview: 2.67
         },
@@ -637,7 +637,7 @@ module.exports = {
             imagepath: '/img/product/product45.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 5,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -651,7 +651,7 @@ module.exports = {
             imagepath: '/img/product/product46.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 1,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 3,
             overallReview: 2.67
         },
@@ -665,7 +665,7 @@ module.exports = {
             imagepath: '/img/product/product47.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 2,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 4,
             overallReview: 3.67
         },
@@ -679,7 +679,7 @@ module.exports = {
             imagepath: '/img/product/product48.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 3,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 5,
             overallReview: 4.67
         },
@@ -694,7 +694,7 @@ module.exports = {
             imagepath: '/img/product/product49.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 4,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 2,
             overallReview: 2.67
         },
@@ -708,7 +708,7 @@ module.exports = {
             imagepath: '/img/product/product50.png',
             thumbnailPath: '/img/product/product-sm-5.png',
             teacherId: 5,
-            categoryId: 3,
+            categoryId: 5,
             reviewCount: 3,
             overallReview: 2.67
         }
