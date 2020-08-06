@@ -1,12 +1,17 @@
 let controller = {};
 let models = require('../models');
 let Category = models.Category;
+let Sequelize = require('sequelize');
+let Op = Sequelize.Op;
 
 controller.getAll = (query) => {
     return new Promise((resolve, reject) => {
         let options = {
             attributes: ['id', 'name', 'imagepath', 'summary'],
-            include: [{ model: models.Course }]
+            include: [{
+                model: models.Course,
+                where: {}
+            }]
         };
         if (query && query.search != '') {
             options.include[0].where.name = {
