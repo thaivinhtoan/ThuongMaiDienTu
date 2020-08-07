@@ -19,6 +19,8 @@
     "express-handlebars-paginate": "^1.0.3",
     "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
+    "ico": "^0.3.3",
+    "nodemailer": "^6.4.11",
     "pg": "^8.3.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.22.3",
