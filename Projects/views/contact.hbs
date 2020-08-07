@@ -1,90 +1,161 @@
-
-
 {{> banner}}
-	<!-- ================ contact section start ================= -->
-  <section class="section-margin--small">
-    <div class="container">
-      <div class="d-none d-sm-block mb-5 pb-4">
-        <div id="map" style="height: 420px;"></div>
-        <script>
-          function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
-            var grayStyles = [
-              {
-                featureType: "all",
-                stylers: [
-                  { saturation: -90 },
-                  { lightness: 50 }
-                ]
-              },
-              {elementType: 'labels.text.fill', stylers: [{color: '#A3A3A3'}]}
-            ];
-            var map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -31.197, lng: 150.744},
-              zoom: 9,
-              styles: grayStyles,
-              scrollwheel:  false
-            });
-          }
-          
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"></script>
-        
-      </div>
-
-
-      <div class="row">
-        <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-home"></i></span>
-            <div class="media-body">
-              <h3>California United States</h3>
-              <p>Santa monica bullevard</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-headphone"></i></span>
-            <div class="media-body">
-              <h3><a href="tel:454545654">00 (440) 9865 562</a></h3>
-              <p>Mon to Fri 9am to 6pm</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-email"></i></span>
-            <div class="media-body">
-              <h3><a href="mailto:support@colorlib.com">support@colorlib.com</a></h3>
-              <p>Send us your query anytime!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-lg-9">
-          <form action="#/" class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-            <div class="row">
-              <div class="col-lg-5">
-                <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject">
-                </div>
-              </div>
-              <div class="col-lg-7">
-                <div class="form-group">
-                    <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5" placeholder="Enter Message"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="form-group text-center text-md-right mt-3">
-              <button type="submit" class="button button--active button-contactForm">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </div>
+<!-- ================ contact section start ================= -->
+<section class="section-margin--small">
+  <div class="container">
+    <div class="d-none d-sm-block mb-5 pb-4">
+      <div id="map" style="height: 420px;"></div>
+      <script>
+        function initMap() {
+          var uluru = { lat: -25.363, lng: 131.044 };
+          var grayStyles = [
+            {
+              featureType: "all",
+              stylers: [
+                { saturation: -90 },
+                { lightness: 50 }
+              ]
+            },
+            { elementType: 'labels.text.fill', stylers: [{ color: '#A3A3A3' }] }
+          ];
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 10.758890, lng: 106.684212 },
+            zoom: 9,
+            styles: grayStyles,
+            scrollwheel: false
+          });
+        }
+      </script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"></script>
     </div>
-  </section>
-	<!-- ================ contact section end ================= -->
-  
-  
+
+    <div class="row">
+      <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-home"></i></span>
+          <div class="media-body">
+            <h3>227, Nguyen Van Cu Street, Ward 4, District 5, Ho Chi Minh City</h3>
+            <p>University Of Sciences</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-headphone"></i></span>
+          <div class="media-body">
+            <h3><a href="tel:454545654">00 (440) 9865 562</a></h3>
+            <p>Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-email"></i></span>
+          <div class="media-body">
+            <h3><a href="mailto:support@colorlib.com">team20b01@gmail.com</a></h3>
+            <p>Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div>
+      <h3 class="text-dark">Information:</h3>
+      <div>Để giúp khóa học phát triển tốt hơn, mang lại nhiều giá trị hữu ích hơn, hãy để lại nhận xét của bạn bằng
+        cách gửi mail về cho chúng tôi theo form dưới đây nhé!</div>
+      <div class="font-italic">
+        Send an email. All fields with an * are required
+      </div>
+
+      <div class="container form-top">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+            <div class="panel panel-danger">
+              <div class="panel-body">
+                <form id="reused_form">
+                  <div class="form-group">
+                    <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Enter Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                  </div>
+                  <div class="form-group">
+                    <label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
+                    <textarea rows="3" name="message" class="form-control" placeholder="Type Your Message" required></textarea>
+                  </div>
+
+
+                  <div class="form-group">
+                    <button class="btn btn-raised btn-block btn-danger">Post →</button>
+                  </div>
+                </form>
+                <div id="error_message" style="width:100%; height:100%; display:none; ">
+                  <h4>Error</h4>
+                  Sorry there was an error sending your form.
+                </div>
+                <div id="success_message" style="width:100%; height:100%; display:none; ">
+                  <h2>Success! Your Message was Sent Successfully.</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Form Ended-->
+    </div>
+  </div>
+</section>
+<!-- ================ contact section end ================= -->
+<script>
+  $(function () {
+    function after_form_submitted(data) {
+      if (data.result == 'success') {
+        $('form#reused_form').hide();
+        $('#success_message').show();
+        $('#error_message').hide();
+      }
+      else {
+        $('#error_message').append('<ul></ul>');
+
+        jQuery.each(data.errors, function (key, val) {
+          $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
+        });
+        $('#success_message').hide();
+        $('#error_message').show();
+
+        //reverse the response on the button
+        $('button[type="button"]', $form).each(function () {
+          $btn = $(this);
+          label = $btn.prop('orig_label');
+          if (label) {
+            $btn.prop('type', 'submit');
+            $btn.text(label);
+            $btn.prop('orig_label', '');
+          }
+        });
+
+      }//else
+    }
+
+    $('#reused_form').submit(function (e) {
+      e.preventDefault();
+
+      $form = $(this);
+      //show some response on the button
+      $('button[type="submit"]', $form).each(function () {
+        $btn = $(this);
+        $btn.prop('type', 'button');
+        $btn.prop('orig_label', $btn.text());
+        $btn.text('Sending ...');
+      });
+
+
+      $.ajax({
+        type: "POST",
+        url: 'handler.php',
+        data: $form.serialize(),
+        success: after_form_submitted,
+        dataType: 'json'
+      });
+
+    });
+  });
+</script>
