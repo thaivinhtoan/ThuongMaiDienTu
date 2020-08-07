@@ -50,14 +50,17 @@
             {{/if}}
           </ul>
 
-          <ul class="nav-shop">
-            <form action="/courses" method="GET">
+          <ul class = "nav-shop">
+              <form action="/courses" method="GET">
               <div class="input-group filter-bar-search">
                 <input type="text" name="search" placeholder="Search">
                 <div class="input-group-append">
                   <button type="submit"><i class="ti-search"></i></button>
                 </div>
             </form>
+          </ul>
+
+          <ul class="nav-shop">
             <li class="nav-item"><button onclick="location.href='/cart'"><i class="ti-shopping-cart"></i><span
                   class="nav-shop__circle" id="cart-badge">{{totalQuantity}}</span></button> </li>
             <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>

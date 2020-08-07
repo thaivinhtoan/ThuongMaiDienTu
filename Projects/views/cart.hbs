@@ -87,14 +87,14 @@
                         <tr class="shipping_area">
                             <td class="d-none d-md-block">
 
-                            </td>
+                            {{!-- </td>
                             <td>
 
                             </td>
                             <td>
                                 <h5>Shipping</h5>
-                            </td>
-                            <td>
+                            </td> --}}
+                            {{!-- <td>
                                 <div class="shipping_box">
                                     <ul class="list">
                                         <li><a href="#">Flat Rate: $5.00</a></li>
@@ -116,7 +116,7 @@
                                     <input type="text" placeholder="Postcode/Zipcode">
                                     <a class="gray_btn" href="#">Update Details</a>
                                 </div>
-                            </td>
+                            </td> --}}
                         </tr>
                         <tr class="out_button_area">
                             <td class="d-none-l">
@@ -130,8 +130,25 @@
                             </td>
                             <td>
                                 <div class="checkout_btn_inner d-flex align-items-center">
-                                    <a class="gray_btn" href="#">Continue Shopping</a>
-                                    <a class="primary-btn ml-2" href="#">Proceed to checkout</a>
+                                    {{!-- <a class="gray_btn" href="#">Continue Shopping</a> --}}
+                                    {{!-- <a class="primary-btn ml-2" href="#">THANH TOÁN</a> --}}
+                                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <input type="hidden" name="cmd" value="_xclick">
+                                    <input type="hidden" name="business" value="sb-nuns01654386@business.example.com">
+                                    <input type="hidden" name="lc" value="VN">
+                                    <input type="hidden" name="item_name" value="THANH TOÁN">
+                                    <input type="hidden" name="amount" value= 2>
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <input type="hidden" name="button_subtype" value="services">
+                                    <input type="hidden" name="no_note" value="0">
+                                    <input type="hidden" name="tax_rate" value="0.000">
+                                    <input type="hidden" name="shipping" value="0.00">
+                                    <input type="hidden" name="return" value="https://ppsandbox1712824.herokuapp.com/success.html">
+                                    <input type="hidden" name="cancel_return" value="https://ppsandbox1712824.herokuapp.com/cancel.html">
+                                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest">
+                                    <input type="image" src="https://lh3.googleusercontent.com/proxy/nWrIKdYoz4ecZMwr-DPgx6-SS9QjG6RMgvaWTzuimldk3IduzPoM60gVaeP-Kqph3VjQEVErecV44_fo-eYjSe7CUg70KgmW6_PmkJDizS_3oM_c_dS8HFsN5EhBAzG1Vg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
                                 </div>
                             </td>
                         </tr>
