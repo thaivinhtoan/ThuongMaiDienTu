@@ -129,7 +129,7 @@
                                 <div class="checkout_btn_inner " align="right">
                                     {{!-- <a class="gray_btn" href="#">Continue Shopping</a> --}}
                                     {{!-- <a class="primary-btn ml-2" href="#">THANH TOÁN</a> --}}
-                                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="popup">
+                                    {{!-- <form action="cart/pay" method="post" target="popup">
                                     <input type="hidden" name="cmd" value="_xclick">
                                     <input type="hidden" name="business" value="sb-nuns01654386@business.example.com">
                                     <input type="hidden" name="lc" value="VN">
@@ -144,7 +144,11 @@
                                     <input type="hidden" name="cancel_return" value="https://ppsandbox1712824.herokuapp.com/cancel.html">
                                     <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest">
                                     <input type="image" src="img/cart/buttonbuy.png" width="270" height="160" align="right" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> --}}
+                                    <form action="/cart/pay" method="post">
+                                        {{!-- <input type = "submit" class = "btn btn-primary btn-lg mb30" value="Mua"> --}}
+                                        <input type="image" src="img/cart/buttonbuy.png" width="270" height="160" align="right" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+
                                     </form>
                                 </div>
                             </td>
