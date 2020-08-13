@@ -2,6 +2,7 @@
 <!--================Blog Categorie Area =================-->
 <section class="blog_categorie_area">
     <div class="container">
+        {{#if isLoggedIn}}
         <div class="row">
             <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
                 <div class="categories_post">
@@ -17,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            {{!-- <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
                 <div class="categories_post">
                     <img class="card-img rounded-0" src="img/blog/cat-post/cart2.png" alt="post">
                     <div class="categories_details">
@@ -44,13 +45,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
+        {{else}}
+            <h4 style="text-align: center;">Please login to see your class! <a href="/users/login?returnURL=/courses/{{id}}">Click here to login!</a></h4>
+            {{/if}}
     </div>
 </section>
 <!--================Blog Categorie Area =================-->
 <!--================Blog Area =================-->
-<section class="blog_area">
+{{!-- <section class="blog_area">
     <div class="container">
         <div class="row">
             <div class="col-sm-11">
@@ -131,7 +135,7 @@
 
 
     </div>
-</section>
+</section> --}}
 
 
 <!--================Blog Area =================-->
