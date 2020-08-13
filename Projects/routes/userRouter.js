@@ -91,6 +91,17 @@ router.post('/register', (req, res, next) => {
         .catch(error => next(error));;
 });
 
+// router.get('/:id', (req, res, next) => {
+//     let userController = require('../controllers/userController');
+//     userController
+//         .getById(req.params.id)
+//         .then(user => {
+//             res.locals.user = user;
+//             res.render('blog');
+//         })
+//         .catch(error => next(error));
+// });
+
 router.get('/logout', (req, res, next) => {
     req.session.destroy(error => {
         if (error) {

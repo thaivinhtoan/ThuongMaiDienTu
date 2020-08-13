@@ -30,4 +30,19 @@ controller.isLoggedIn = (req, res, next) => {
     }
 };
 
+//Users
+controller.getById = (id) => {
+    return new Promise((resolve, reject) => {
+        let user;
+        User
+            .findOne({
+                where: { id: id },
+            })
+            .then(result => {
+                user = result;
+            })
+            .catch(error => reject(new Error(error)));
+    });
+};
+
 module.exports = controller;

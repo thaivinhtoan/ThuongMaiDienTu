@@ -76,7 +76,6 @@ router.get('/:id', (req, res, next) => {
             res.render('single-product');
         })
         .catch(error => next(error));
-
 });
 
 /* đang nghĩ cách chèn mỗi bài học học 1 link video nhúng*/

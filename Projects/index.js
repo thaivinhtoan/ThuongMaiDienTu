@@ -97,6 +97,8 @@ app.use('/users', require('./routes/userRouter'));
 app.use('/cart', require('./routes/cartRouter'));
 app.use('/comments', require('./routes/commentRouter'));
 app.use('/reviews', require('./routes/reviewRouter'));
+// app.use('/class', require('./routes/classRouter'));
+
 
 app.get('/sync', (req, res) => {
     let models = require('./models');
