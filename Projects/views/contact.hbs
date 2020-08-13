@@ -55,6 +55,7 @@
       </div>
 
     </div>
+
     <div>
       <h3 class="text-dark">Information:</h3>
       <div>Để giúp khóa học phát triển tốt hơn, mang lại nhiều giá trị hữu ích hơn, hãy để lại nhận xét của bạn bằng
@@ -62,100 +63,81 @@
       <div class="font-italic">
         Send an email. All fields with an * are required
       </div>
-
-      <div class="container form-top">
+      <form action="#" method="POST" id="form-contact">
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-            <div class="panel panel-danger">
-              <div class="panel-body">
-                <form id="reused_form">
-                  <div class="form-group">
-                    <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Enter Name" required>
-                  </div>
-                  <div class="form-group">
-                    <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Enter Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                  </div>
-                  <div class="form-group">
-                    <label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
-                    <textarea rows="3" name="message" class="form-control" placeholder="Type Your Message" required></textarea>
-                  </div>
-
-
-                  <div class="form-group">
-                    <button class="btn btn-raised btn-block btn-danger">Post →</button>
-                  </div>
-                </form>
-                <div id="error_message" style="width:100%; height:100%; display:none; ">
-                  <h4>Error</h4>
-                  Sorry there was an error sending your form.
-                </div>
-                <div id="success_message" style="width:100%; height:100%; display:none; ">
-                  <h2>Success! Your Message was Sent Successfully.</h2>
-                </div>
-              </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="name">Subject *</label>
+              <input type="text" name="subject" id="subject" class="form-control" placeholder=""
+                aria-describedby="helpId" required>
             </div>
           </div>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="message"> Message *</label>
+          <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+        </div>
+        <div class="text-right">
+          <div id="msg" class="text-primary float-left"></div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input type="checkbox" name="copy" id="copy" class="form-check-input" value="checkedValue">Send copy to
+              yourself
+            </label>
+          </div>
+          <button type="submit" class="btn btn-link">Send Email</button>
+        </div>
+      </form>
       <!--Form Ended-->
     </div>
   </div>
 </section>
 <!-- ================ contact section end ================= -->
 <script>
-  $(function () {
-    function after_form_submitted(data) {
-      if (data.result == 'success') {
-        $('form#reused_form').hide();
-        $('#success_message').show();
-        $('#error_message').hide();
-      }
-      else {
-        $('#error_message').append('<ul></ul>');
-
-        jQuery.each(data.errors, function (key, val) {
-          $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
-        });
-        $('#success_message').hide();
-        $('#error_message').show();
-
-        //reverse the response on the button
-        $('button[type="button"]', $form).each(function () {
-          $btn = $(this);
-          label = $btn.prop('orig_label');
-          if (label) {
-            $btn.prop('type', 'submit');
-            $btn.text(label);
-            $btn.prop('orig_label', '');
-          }
-        });
-
-      }//else
-    }
-
-    $('#reused_form').submit(function (e) {
+  $(document).ready(() => {
+    $("#msg").html('');
+    $("#form-contact").on('submit', (e) => {
       e.preventDefault();
-
-      $form = $(this);
-      //show some response on the button
-      $('button[type="submit"]', $form).each(function () {
-        $btn = $(this);
-        $btn.prop('type', 'button');
-        $btn.prop('orig_label', $btn.text());
-        $btn.text('Sending ...');
-      });
-
-
       $.ajax({
+        url: "https://web1-api.herokuapp.com/users/authenticate",
+        dataType: "json",
         type: "POST",
-        url: 'handler.php',
-        data: $form.serialize(),
-        success: after_form_submitted,
-        dataType: 'json'
+        data: {
+          username: 'test',
+          password: '1c3cream'
+        },
+        success: function (r) {
+          var formData = $("#form-contact").serialize();
+          $.ajax({
+            url: "https://web1-api.herokuapp.com/users/send",
+            dataType: "json"m
+            type: "POST",
+            headers: {
+              "Authorization": "Bearer" + r.token
+            },
+            date: formData,
+            success: function (r) {
+              $("#msg").html(r.message);
+            },
+            error: function (xhr, status, error) {
+              $("#msg").html(error);
+              //window.alert(error);
+            }
+          });
+        }
       });
-
     });
   });
 </script>

@@ -57,41 +57,39 @@ app.use((req, res, next) => {
     res.locals.isLoggedIn = req.session.user ? true : false;
     next();
 });
-
 // Use nodemailer
-const nodemailer = require('nodemailer');
-// POST route from contact form
-app.post('/contact', (req, res) => {
-    const GMAIL_USER = process.env.username
-    const GMAIL_PASS = process.env.password
-        // Instantiate the SMTP server
-    const smtpTrans = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-            user: GMAIL_USER,
-            pass: GMAIL_PASS
-        }
-    })
+// const nodemailer = require('nodemailer');
+// // POST route from contact form
+// app.post('/contact', (req, res) => {
 
-    // Specify what the email will look like
-    const mailOpts = {
-        from: 'Your sender info here', // This is ignored by Gmail
-        to: GMAIL_USER,
-        subject: 'New message from contact form at tylerkrys.ca',
-        text: `${req.body.name} (${req.body.username}) says: ${req.body.message}`
-    }
+//     // Instantiate the SMTP server
+//     const smtpTrans = nodemailer.createTransport({
+//         host: 'smtp.gmail.com',
+//         port: 465,
+//         secure: true,
+//         auth: {
+//             user: GMAIL_USER,
+//             pass: GMAIL_PASS
+//         }
+//     })
 
-    // Attempt to send the email
-    smtpTrans.sendMail(mailOpts, (error, response) => {
-        if (error) {
-            res.render('contact-failure') // Show a page indicating failure
-        } else {
-            res.render('contact-success') // Show a page indicating success
-        }
-    })
-})
+//     // Specify what the email will look like
+//     const mailOpts = {
+//         from: 'Your sender info here', // This is ignored by Gmail
+//         to: GMAIL_USER,
+//         subject: 'New message from contact form at tylerkrys.ca',
+//         text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+//     }
+
+//     // Attempt to send the email
+//     smtpTrans.sendMail(mailOpts, (error, response) => {
+//         if (error) {
+//             res.render('contact-failure') // Show a page indicating failure
+//         } else {
+//             res.render('contact-success') // Show a page indicating success
+//         }
+//     })
+// })
 
 app.use('/', require('./routes/indexRouter'));
 app.use('/courses', require('./routes/productRouter'));
@@ -115,7 +113,7 @@ app.get('/link', (req, res, next) => {
 
 app.get('/:page', (req, res) => {
     let banners = {
-        blog: 'Our Blog',
+        // blog: 'Our Blog',
         category: 'Category',
         cart: 'Shopping Cart'
     };
