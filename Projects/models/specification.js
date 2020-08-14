@@ -3,10 +3,10 @@ module.exports = (sequelize, DataTypes) => {
     const Specification = sequelize.define('Specification', {
         name: DataTypes.STRING,
         summary: DataTypes.TEXT
-    }, {});
+    }, {tableName: 'specifications'});
     Specification.associate = function(models) {
         // associations can be defined here
-        Specification.hasMany(models.CourseSpecification, { foreignKey: 'specificationId' });
+        Specification.hasMany(models.CourseSpecification, { foreignKey: 'specificationid' });
     };
     return Specification;
 };

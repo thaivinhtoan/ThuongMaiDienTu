@@ -9,7 +9,7 @@ controller.getAll = (query) => {
     return new Promise((resolve, reject) => {
         let options = {
             include: [{ model: models.CodeCourse }],
-            attributes: ['id', 'code', 'status', 'dateUse'],
+            attributes: ['id', 'code', 'status', 'dateuse'],
             where: {}
         };
 

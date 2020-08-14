@@ -1,0 +1,38 @@
+
+
+{{> banner}}
+
+<section class="blog_area">
+    <div class="container">
+        {{#each content}}
+        <div class="row">
+            <div class="col-sm-11">
+                <div class="row"
+                    style="margin: auto;outline-style: solid; margin-top: 10px;margin-bottom: 10px;margin-right: 10px;">
+                    <h4 style=" margin: 0 auto;">{{lesson}}</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"
+                        style="margin: auto;outline-style: solid; margin-top: 10px;margin-bottom: 10px;">
+                        <p style="margin: auto; margin-top:10px;">{{description}}</p>
+                    </div>
+                    <div class="col-md-9" style="margin: auto; margin-top: 10px;margin-bottom: 10px;">
+                        <iframe width="720" height="400" src="{{link}}" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1" style="margin: auto;outline-style: solid; margin-top: 10px;margin-bottom: 10px;">
+                <label style="margin: auto;  margin-top: 160px;"><input type="checkbox" value="">Complete</label>
+            </div>
+        </div>
+        {{/each}}
+       
+
+
+
+    </div>
+</section>
+ 
+

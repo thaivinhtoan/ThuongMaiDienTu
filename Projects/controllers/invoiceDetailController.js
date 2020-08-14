@@ -8,7 +8,7 @@ controller.add = (invoicedetail) => {
         InvoiceDetail
             .findOne({
                 where: {
-                    userId: invoicedetail.userId,
+                    userId: invoicedetail.userid,
                     codecourseId: invoicedetail.codecourseId,
                 }
             })
@@ -16,8 +16,8 @@ controller.add = (invoicedetail) => {
                 if (data) {
                     return InvoiceDetail.update(invoicedetail, {
                         where: {
-                            userId: invoicedetail.userId,
-                            courseId: invoicedetail.codecourseId,
+                            userId: invoicedetail.userid,
+                            courseId: invoicedetail.codecourseid,
                         }
                     })
                 } else {
@@ -30,11 +30,11 @@ controller.add = (invoicedetail) => {
 };
 
 // get all InvoiceDetails
-controller.getInvoiceDetail = (userId, codecourseId) => {
+controller.getInvoiceDetail = (userid, codecourseid) => {
     return Review.findOne({
         where: {
-            userId,
-            codecourseId
+            userid,
+            codecourseid
         }
     });
 };

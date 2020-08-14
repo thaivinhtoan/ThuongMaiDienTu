@@ -4,14 +4,14 @@ module.exports = (sequelize, DataTypes) => {
         username: DataTypes.STRING,
         password: DataTypes.STRING,
         fullname: DataTypes.STRING,
-        avatarPath: DataTypes.STRING,
-        isAdmin: DataTypes.BOOLEAN
-    }, {});
+        avatarpath: DataTypes.STRING,
+        isadmin: DataTypes.BOOLEAN
+    }, {tableName: 'users'});
     User.associate = function(models) {
         // associations can be defined here
-        User.hasMany(models.Comment, { foreignKey: 'userId' });
-        User.hasMany(models.Review, { foreignKey: 'userId' });
-        User.hasMany(models.InvoiceDetail, { foreignKey: 'userId' });
+        User.hasMany(models.Comment, { foreignKey: 'userid' });
+        User.hasMany(models.Review, { foreignKey: 'userid' });
+        User.hasMany(models.InvoiceDetail, { foreignKey: 'userid' });
     };
     return User;
 };

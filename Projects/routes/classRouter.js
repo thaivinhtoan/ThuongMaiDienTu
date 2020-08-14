@@ -1,30 +1,22 @@
 let express = require('express');
 let router = express.Router();
+let classController = require('../controllers/classController');
+let userController = require('../controllers/userController');
+router.get('/', userController.isLoggedIn,async(req, res, next) => {
+    let user_inf = await classController.getuser(req.session.user.id);
+    res.locals.user_inf = user_inf;
 
-router.get('/', (req, res, next) => {
-    let userController = require('../controllers/userController');
-    userController
-        .getUserByEmail()
-        .then(data => {
-            res.locals.users = data;
-            let invoiceDetailController = require('../controllers/invoiceDetailController');
-            return invoiceDetailController.getAll();
-        })
-        .then(data => {
-            res.locals.invoicedetails = data;
-            let codeCourseController = require('../controllers/codeCourseController');
-            return codeCourseController.getAll();
-        })
-        .then(data => {
-            res.locals.codecourses = data;
-            let contentCourseController = require('../controllers/contentCourseController');
-            return contentCourseController.getAll();
-        })
-        .then(data => {
-            res.locals.contentcourses = data;
-            res.render('index');
-        })
-        .catch(error => next(error));
+    let cl = await classController.getclass(req.session.user.id);
+    res.locals.cl = cl; 
+    res.render('class')
+});
+router.get('/:id', async (req, res) => {
+    
+    
+    var id = req.params.id;
+    let content = await classController.getcontent(id);
+    res.locals.content = content;
+    res.render('single-class')
 });
 
 module.exports = router;

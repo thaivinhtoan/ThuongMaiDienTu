@@ -62,7 +62,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
     let productController = require('../controllers/productController');
     productController
-        .getById(req.params.id)
+        .getByid(req.params.id)
         .then(course => {
             res.locals.course = course;
             let reviewController = require('../controllers/reviewController');

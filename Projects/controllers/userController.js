@@ -31,7 +31,7 @@ controller.isLoggedIn = (req, res, next) => {
 };
 
 //Users
-controller.getById = (id) => {
+controller.getByid = (id) => {
     return new Promise((resolve, reject) => {
         let user;
         User

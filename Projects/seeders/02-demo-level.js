@@ -12,11 +12,11 @@ module.exports = {
             item.updatedAt = Sequelize.literal('NOW()');
             return item;
         });
-        return queryInterface.bulkInsert('Levels', data, {});
+        return queryInterface.bulkInsert('levels', data, {});
     },
 
     down: (queryInterface, Sequelize) => {
-        return queryInterface.bulkDelete('Levels', null, {});
+        return queryInterface.bulkDelete('levels', null, {});
 
     }
 };

@@ -30,12 +30,12 @@
 					<div class="product_count">
 						<label for="qty">Quantity:</label>
 						<button
-							onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+							onclick="var result = document.getElementByid('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 							class="increase items-count" type="button"><i class="ti-angle-left"></i></button>
 						<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:"
 							class="input-text qty" readonly>
 						<button
-							onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+							onclick="var result = document.getElementByid('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
 							class="reduced items-count" type="button"><i class="ti-angle-right"></i></button>
 						<a class="button primary-btn text-white add-to-cart" data-id="{{id}}">Add to Cart</a>
 					</div>
@@ -102,7 +102,7 @@
 							<div class="review_item">
 								<div class="media">
 									<div class="d-flex">
-										<img src="{{User.avatarPath}}" alt="">
+										<img src="{{User.avatarpath}}" alt="">
 									</div>
 									<div class="media-body">
 										<h4>{{User.fullname}}</h4>
@@ -116,7 +116,7 @@
 							<div class="review_item reply">
 								<div class="media">
 									<div class="d-flex">
-										<img src="{{User.avatarPath}}" alt="">
+										<img src="{{User.avatarpath}}" alt="">
 									</div>
 									<div class="media-body">
 										<h4>{{User.fullname}}</h4>
@@ -144,9 +144,9 @@
 											<span aria-hidden="true">&times; &nbsp;</span>
 										</button>
 										<label for="" id="reply"></label>
-										<input type="hidden" class="form-control" name="courseId" id="courseId"
+										<input type="hidden" class="form-control" name="courseid" id="courseid"
 											value="{{id}}">
-										<input type="hidden" name="parentCommentId" id="parentCommentId" value="">
+										<input type="hidden" name="parentCommentid" id="parentCommentid" value="">
 									</div>
 								</div>
 								<div class="col-md-12">
@@ -176,13 +176,13 @@
 							<div class="col-6">
 								<div class="box_total">
 									<h5>Overall</h5>
-									<h4>{{overallReview}}</h4>
-									<h6>({{reviewCount}} Reviews)</h6>
+									<h4>{{overallreview}}</h4>
+									<h6>({{reviewcount}} Reviews)</h6>
 								</div>
 							</div>
 							<div class="col-6">
 								<div class="rating_list">
-									<h3>Based on {{reviewCount}} Reviews</h3>
+									<h3>Based on {{reviewcount}} Reviews</h3>
 									{{{ createStarList stars }}}
 								</div>
 							</div>
@@ -192,7 +192,7 @@
 							<div class="review_item">
 								<div class="media">
 									<div class="d-flex">
-										<img src="{{User.avatarPath}}" alt="">
+										<img src="{{User.avatarpath}}" alt="">
 									</div>
 									<div class="media-body">
 										<h4>{{User.fullname}}</h4>
@@ -219,7 +219,7 @@
 							<p id="starName">Outstanding</p>
 							<form action="/reviews" method="POST" class="form-contact form-review mt-3">
 								<div class="form-group">
-									<input type="hidden" name="courseId" value="{{id}}">
+									<input type="hidden" name="courseid" value="{{id}}">
 									<input type="hidden" name="rating" id="rating" value="{{../userReview.rating}}">
 								</div>
 								<div class="form-group">
@@ -246,16 +246,16 @@
 {{/with}}
 
 <script>
-	function showReply(parentCommentId, fullname) {
+	function showReply(parentCommentid, fullname) {
 		$('#closeButton').show();
 		$('#reply').html('Reply' + fullname);
-		$('#parentCommentId').val(parentCommentId);
+		$('#parentCommentid').val(parentCommentid);
 	}
 
 	function removeReply() {
 		$('#closeButton').hide();
 		$('#reply').html('');
-		$('#parentCommentId').val('');
+		$('#parentCommentid').val('');
 	}
 
 	function checkStars() {

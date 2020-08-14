@@ -9,16 +9,16 @@ controller.add = (review) => {
         Review
             .findOne({
                 where: {
-                    userId: review.userId,
-                    courseId: review.courseId,
+                    userid: review.userid,
+                    courseid: review.courseid,
                 }
             })
             .then(data => {
                 if (data) {
                     return Review.update(review, {
                         where: {
-                            userId: review.userId,
-                            courseId: review.courseId,
+                            userid: review.userid,
+                            courseid: review.courseid,
                         }
                     })
                 } else {
@@ -28,7 +28,7 @@ controller.add = (review) => {
             .then(() => {
                 models.Course
                     .findOne({
-                        where: { id: review.courseId },
+                        where: { id: review.courseid },
                         include: [{ model: models.Review }]
                     })
                     .then(course => {
@@ -51,11 +51,11 @@ controller.add = (review) => {
     });
 };
 
-controller.getUserReviewCourse = (userId, courseId) => {
+controller.getUserReviewCourse = (userid, courseid) => {
     return Review.findOne({
         where: {
-            userId,
-            courseId
+            userid,
+            courseid
         }
     });
 };

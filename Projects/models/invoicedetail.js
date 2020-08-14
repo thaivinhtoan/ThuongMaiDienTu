@@ -2,12 +2,13 @@
 module.exports = (sequelize, DataTypes) => {
     const InvoiceDetail = sequelize.define('InvoiceDetail', {
         price: DataTypes.DECIMAL,
-        datePurchase: DataTypes.DATE
-    }, {});
+        datepurchase: DataTypes.DATE
+    }, {tableName: 'invoicedetails'});
     InvoiceDetail.associate = function(models) {
         // associations can be defined here
-        InvoiceDetail.belongsTo(models.CodeCourse, { foreignKey: 'codecourseId' });
-        InvoiceDetail.belongsTo(models.User, { foreignKey: 'userId' });
+        InvoiceDetail.belongsTo(models.CodeCourse, { foreignKey: 'codecourseid' });
+        InvoiceDetail.belongsTo(models.User, { foreignKey: 'userid' });
+        InvoiceDetail.belongsTo(models.Course, { foreignKey: 'courseid' });
     };
     return InvoiceDetail;
 };

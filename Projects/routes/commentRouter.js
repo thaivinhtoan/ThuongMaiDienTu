@@ -5,17 +5,17 @@ let userController = require('../controllers/userController');
 router.post('/', userController.isLoggedIn, (req, res, next) => {
     let controller = require('../controllers/commentController');
     let comment = {
-        userId: req.session.user.id,
-        courseId: req.body.courseId,
+        userid: req.session.user.id,
+        courseid: req.body.courseid,
         message: req.body.message
     };
-    if (!isNaN(req.body.parentCommentId) && (req.body.parentCommentId != '')) {
-        comment.parentCommentId = req.body.parentCommentId;
+    if (!isNaN(req.body.parentCommentid) && (req.body.parentCommentid != '')) {
+        comment.parentCommentid = req.body.parentCommentid;
     }
     controller
         .add(comment)
         .then(data => {
-            res.redirect('/courses/' + data.courseId);
+            res.redirect('/courses/' + data.courseid);
         })
         .catch(error => next(error));
 });

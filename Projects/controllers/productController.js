@@ -10,7 +10,7 @@ controller.getTrendingCourses = () => {
         Course
             .findAll({
                 order: [
-                    ['overallReview', 'DESC']
+                    ['overallreview', 'DESC']
                 ],
                 limit: 8,
                 include: [{ model: models.Category }],
@@ -26,7 +26,7 @@ controller.getAll = (query) => {
     return new Promise((resolve, reject) => {
         let options = {
             include: [{ model: models.Category }],
-            attributes: ['id', 'name', 'price', 'imagepath', 'categoryId'],
+            attributes: ['id', 'name', 'price', 'imagepath', 'categoryid'],
             where: {
                 price: {
                     [Op.gte]: query.min,
@@ -35,7 +35,7 @@ controller.getAll = (query) => {
             }
         };
         if (query.category > 0) {
-            options.where.categoryId = query.category;
+            options.where.categoryid = query.category;
         }
         if (query.search != '') {
             options.where.name = {
@@ -43,13 +43,13 @@ controller.getAll = (query) => {
             }
         }
         if (query.teacher > 0) {
-            options.where.teacherId = query.teacher;
+            options.where.teacherid = query.teacher;
         }
         if (query.level > 0) {
             options.include.push({
                 model: models.CourseLevel,
                 attributes: [],
-                where: { levelId: query.level }
+                where: { levelid: query.level }
             });
         }
         // Pagination
@@ -70,9 +70,9 @@ controller.getAll = (query) => {
                         ['price', 'ASC']
                     ];
                     break;
-                case 'overallReview':
+                case 'overallreview':
                     options.order = [
-                        ['overallReview', 'DESC']
+                        ['overallreview', 'DESC']
                     ];
                     break;
                 default:
@@ -89,7 +89,7 @@ controller.getAll = (query) => {
     });
 };
 //Courses
-controller.getById = (id) => {
+controller.getByid = (id) => {
     return new Promise((resolve, reject) => {
         let course;
         Course
@@ -100,14 +100,14 @@ controller.getById = (id) => {
             .then(result => {
                 course = result;
                 return models.CourseSpecification.findAll({
-                    where: { courseId: id },
+                    where: { courseid: id },
                     include: [{ model: models.Specification }]
                 });
             })
             .then(courseSpecification => {
                 course.CourseSpecifications = courseSpecification;
                 return models.Comment.findAll({
-                    where: { courseId: id, parentCommentId: null },
+                    where: { courseid: id, parentCommentid: null },
                     include: [{ model: models.User },
                         {
                             model: models.Comment,
@@ -120,7 +120,7 @@ controller.getById = (id) => {
             .then(comments => {
                 course.Comments = comments;
                 return models.Review.findAll({
-                    where: { courseId: id },
+                    where: { courseid: id },
                     include: [{ model: models.User }]
                 });
             })

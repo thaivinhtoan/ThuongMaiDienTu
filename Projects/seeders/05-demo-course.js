@@ -9,11 +9,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product1.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 1,
-                categoryId: 1,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 1,
+                categoryid: 1,
+                reviewcount: 3,
+                overallreview: 2.67
             },
         
             {
@@ -23,11 +23,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product2.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 2,
-                categoryId: 1,
-                reviewCount: 4,
-                overallReview: 3.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 2,
+                categoryid: 1,
+                reviewcount: 4,
+                overallreview: 3.67
             },
 
             {
@@ -37,11 +37,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product3.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 3,
-                categoryId: 1,
-                reviewCount: 5,
-                overallReview: 4.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 3,
+                categoryid: 1,
+                reviewcount: 5,
+                overallreview: 4.67
             },
 
 
@@ -52,11 +52,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product4.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 4,
-                categoryId: 1,
-                reviewCount: 2,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 4,
+                categoryid: 1,
+                reviewcount: 2,
+                overallreview: 2.67
             },
 
             {
@@ -66,11 +66,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product5.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 5,
-                categoryId: 1,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 5,
+                categoryid: 1,
+                reviewcount: 3,
+                overallreview: 2.67
             },
 
             {
@@ -80,11 +80,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product6.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 1,
-                categoryId: 1,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 1,
+                categoryid: 1,
+                reviewcount: 3,
+                overallreview: 2.67
             },
         
             {
@@ -94,11 +94,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product7.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 2,
-                categoryId: 1,
-                reviewCount: 4,
-                overallReview: 3.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 2,
+                categoryid: 1,
+                reviewcount: 4,
+                overallreview: 3.67
             },
 
             {
@@ -108,11 +108,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product8.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 3,
-                categoryId: 1,
-                reviewCount: 5,
-                overallReview: 4.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 3,
+                categoryid: 1,
+                reviewcount: 5,
+                overallreview: 4.67
             },
 
 
@@ -123,11 +123,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product9.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 4,
-                categoryId: 1,
-                reviewCount: 2,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 4,
+                categoryid: 1,
+                reviewcount: 2,
+                overallreview: 2.67
             },
 
             {
@@ -137,11 +137,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product10.png',
-                thumbnailPath: '/img/product/product-sm-1.png',
-                teacherId: 5,
-                categoryId: 1,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-1.png',
+                teacherid: 5,
+                categoryid: 1,
+                reviewcount: 3,
+                overallreview: 2.67
             },
             //JavaScript
             {
@@ -151,11 +151,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product11.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 1,
-                categoryId: 2,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 1,
+                categoryid: 2,
+                reviewcount: 3,
+                overallreview: 2.67
             },
         
             {
@@ -165,11 +165,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product12.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 2,
-                categoryId: 2,
-                reviewCount: 4,
-                overallReview: 3.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 2,
+                categoryid: 2,
+                reviewcount: 4,
+                overallreview: 3.67
             },
 
             {
@@ -179,11 +179,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product13.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 3,
-                categoryId: 2,
-                reviewCount: 5,
-                overallReview: 4.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 3,
+                categoryid: 2,
+                reviewcount: 5,
+                overallreview: 4.67
             },
 
 
@@ -194,11 +194,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product14.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 4,
-                categoryId: 2,
-                reviewCount: 2,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 4,
+                categoryid: 2,
+                reviewcount: 2,
+                overallreview: 2.67
             },
 
             {
@@ -208,11 +208,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product15.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 5,
-                categoryId: 2,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 5,
+                categoryid: 2,
+                reviewcount: 3,
+                overallreview: 2.67
             },
 
             {
@@ -222,11 +222,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product16.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 1,
-                categoryId: 2,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 1,
+                categoryid: 2,
+                reviewcount: 3,
+                overallreview: 2.67
             },
         
             {
@@ -236,11 +236,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product17.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 2,
-                categoryId: 2,
-                reviewCount: 4,
-                overallReview: 3.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 2,
+                categoryid: 2,
+                reviewcount: 4,
+                overallreview: 3.67
             },
 
             {
@@ -250,11 +250,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product18.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 3,
-                categoryId: 2,
-                reviewCount: 5,
-                overallReview: 4.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 3,
+                categoryid: 2,
+                reviewcount: 5,
+                overallreview: 4.67
             },
 
 
@@ -265,11 +265,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product19.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 4,
-                categoryId: 2,
-                reviewCount: 2,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 4,
+                categoryid: 2,
+                reviewcount: 2,
+                overallreview: 2.67
             },
 
             {
@@ -279,11 +279,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product20.png',
-                thumbnailPath: '/img/product/product-sm-2.png',
-                teacherId: 5,
-                categoryId: 2,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-2.png',
+                teacherid: 5,
+                categoryid: 2,
+                reviewcount: 3,
+                overallreview: 2.67
             },
             //XML Tutorials
             {
@@ -293,11 +293,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product21.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 1,
-                categoryId: 3,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 1,
+                categoryid: 3,
+                reviewcount: 3,
+                overallreview: 2.67
             },
         
             {
@@ -307,11 +307,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product22.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 2,
-                categoryId: 3,
-                reviewCount: 4,
-                overallReview: 3.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 2,
+                categoryid: 3,
+                reviewcount: 4,
+                overallreview: 3.67
             },
 
             {
@@ -321,11 +321,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product23.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 3,
-                categoryId: 3,
-                reviewCount: 5,
-                overallReview: 4.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 3,
+                categoryid: 3,
+                reviewcount: 5,
+                overallreview: 4.67
             },
 
 
@@ -336,11 +336,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product24.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 4,
-                categoryId: 3,
-                reviewCount: 2,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 4,
+                categoryid: 3,
+                reviewcount: 2,
+                overallreview: 2.67
             },
 
             {
@@ -350,11 +350,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product25.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 5,
-                categoryId: 3,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 5,
+                categoryid: 3,
+                reviewcount: 3,
+                overallreview: 2.67
             },
 
             {
@@ -364,11 +364,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product26.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 1,
-                categoryId: 3,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 1,
+                categoryid: 3,
+                reviewcount: 3,
+                overallreview: 2.67
             },
         
             {
@@ -378,11 +378,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product27.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 2,
-                categoryId: 3,
-                reviewCount: 4,
-                overallReview: 3.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 2,
+                categoryid: 3,
+                reviewcount: 4,
+                overallreview: 3.67
             },
 
             {
@@ -392,11 +392,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product28.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 3,
-                categoryId: 3,
-                reviewCount: 5,
-                overallReview: 4.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 3,
+                categoryid: 3,
+                reviewcount: 5,
+                overallreview: 4.67
             },
 
 
@@ -407,11 +407,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product29.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 4,
-                categoryId: 3,
-                reviewCount: 2,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 4,
+                categoryid: 3,
+                reviewcount: 2,
+                overallreview: 2.67
             },
 
             {
@@ -421,11 +421,11 @@ module.exports = {
                 description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
                 availability: false,
                 imagepath: '/img/product/product30.png',
-                thumbnailPath: '/img/product/product-sm-3.png',
-                teacherId: 5,
-                categoryId: 3,
-                reviewCount: 3,
-                overallReview: 2.67
+                thumbnailpath: '/img/product/product-sm-3.png',
+                teacherid: 5,
+                categoryid: 3,
+                reviewcount: 3,
+                overallreview: 2.67
             },
 
            //SQL
@@ -436,11 +436,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product31.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 1,
-            categoryId: 4,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 1,
+            categoryid: 4,
+            reviewcount: 3,
+            overallreview: 2.67
         },
     
         {
@@ -450,11 +450,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product32.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 2,
-            categoryId: 4,
-            reviewCount: 4,
-            overallReview: 3.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 2,
+            categoryid: 4,
+            reviewcount: 4,
+            overallreview: 3.67
         },
 
         {
@@ -464,11 +464,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product33.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 3,
-            categoryId: 4,
-            reviewCount: 5,
-            overallReview: 4.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 3,
+            categoryid: 4,
+            reviewcount: 5,
+            overallreview: 4.67
         },
 
 
@@ -479,11 +479,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product34.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 4,
-            categoryId: 4,
-            reviewCount: 2,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 4,
+            categoryid: 4,
+            reviewcount: 2,
+            overallreview: 2.67
         },
 
         {
@@ -493,11 +493,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product35.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 5,
-            categoryId: 4,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 5,
+            categoryid: 4,
+            reviewcount: 3,
+            overallreview: 2.67
         },
 
         {
@@ -507,11 +507,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product36.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 1,
-            categoryId: 4,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 1,
+            categoryid: 4,
+            reviewcount: 3,
+            overallreview: 2.67
         },
     
         {
@@ -521,11 +521,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product37.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 2,
-            categoryId: 4,
-            reviewCount: 4,
-            overallReview: 3.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 2,
+            categoryid: 4,
+            reviewcount: 4,
+            overallreview: 3.67
         },
 
         {
@@ -535,11 +535,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product38.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 3,
-            categoryId: 4,
-            reviewCount: 5,
-            overallReview: 4.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 3,
+            categoryid: 4,
+            reviewcount: 5,
+            overallreview: 4.67
         },
 
 
@@ -550,11 +550,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product39.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 4,
-            categoryId: 4,
-            reviewCount: 2,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 4,
+            categoryid: 4,
+            reviewcount: 2,
+            overallreview: 2.67
         },
 
         {
@@ -564,11 +564,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product40.png',
-            thumbnailPath: '/img/product/product-sm-4.png',
-            teacherId: 5,
-            categoryId: 4,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-4.png',
+            teacherid: 5,
+            categoryid: 4,
+            reviewcount: 3,
+            overallreview: 2.67
         },
         //Python
         {
@@ -578,11 +578,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product41.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 1,
-            categoryId: 5,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 1,
+            categoryid: 5,
+            reviewcount: 3,
+            overallreview: 2.67
         },
     
         {
@@ -592,11 +592,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product42.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 2,
-            categoryId: 5,
-            reviewCount: 4,
-            overallReview: 3.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 2,
+            categoryid: 5,
+            reviewcount: 4,
+            overallreview: 3.67
         },
 
         {
@@ -606,11 +606,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product43.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 3,
-            categoryId: 5,
-            reviewCount: 5,
-            overallReview: 4.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 3,
+            categoryid: 5,
+            reviewcount: 5,
+            overallreview: 4.67
         },
 
 
@@ -621,11 +621,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product44.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 4,
-            categoryId: 5,
-            reviewCount: 2,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 4,
+            categoryid: 5,
+            reviewcount: 2,
+            overallreview: 2.67
         },
 
         {
@@ -635,11 +635,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product45.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 5,
-            categoryId: 5,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 5,
+            categoryid: 5,
+            reviewcount: 3,
+            overallreview: 2.67
         },
 
         {
@@ -649,11 +649,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product46.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 1,
-            categoryId: 5,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 1,
+            categoryid: 5,
+            reviewcount: 3,
+            overallreview: 2.67
         },
     
         {
@@ -663,11 +663,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product47.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 2,
-            categoryId: 5,
-            reviewCount: 4,
-            overallReview: 3.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 2,
+            categoryid: 5,
+            reviewcount: 4,
+            overallreview: 3.67
         },
 
         {
@@ -677,11 +677,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product48.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 3,
-            categoryId: 5,
-            reviewCount: 5,
-            overallReview: 4.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 3,
+            categoryid: 5,
+            reviewcount: 5,
+            overallreview: 4.67
         },
 
 
@@ -692,11 +692,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product49.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 4,
-            categoryId: 5,
-            reviewCount: 2,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 4,
+            categoryid: 5,
+            reviewcount: 2,
+            overallreview: 2.67
         },
 
         {
@@ -706,11 +706,11 @@ module.exports = {
             description: '<p>Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.</p><p>Duis bibendum. Morbi non quamnec dui luctus rutrum. Nulla tellus.</p>',
             availability: false,
             imagepath: '/img/product/product50.png',
-            thumbnailPath: '/img/product/product-sm-5.png',
-            teacherId: 5,
-            categoryId: 5,
-            reviewCount: 3,
-            overallReview: 2.67
+            thumbnailpath: '/img/product/product-sm-5.png',
+            teacherid: 5,
+            categoryid: 5,
+            reviewcount: 3,
+            overallreview: 2.67
         }
         
 
@@ -720,10 +720,10 @@ module.exports = {
             item.updatedAt = Sequelize.literal('NOW()');
             return item;
         });
-        return queryInterface.bulkInsert('Courses', data, {});
+        return queryInterface.bulkInsert('courses', data, {});
     },
 
     down: (queryInterface, Sequelize) => {
-        return queryInterface.bulkDelete('Courses', null, {});
+        return queryInterface.bulkDelete('courses', null, {});
     }
 };

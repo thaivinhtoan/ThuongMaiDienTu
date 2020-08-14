@@ -15,11 +15,11 @@ module.exports = {
             item.updatedAt = Sequelize.literal('NOW()');
             return item;
         });
-        return queryInterface.bulkInsert('Specifications', data, {});
+        return queryInterface.bulkInsert('specifications', data, {});
 
     },
 
     down: (queryInterface, Sequelize) => {
-        return queryInterface.bulkDelete('Specifications', null, {});
+        return queryInterface.bulkDelete('specifications', null, {});
     }
 };

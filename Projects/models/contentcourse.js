@@ -5,10 +5,10 @@ module.exports = (sequelize, DataTypes) => {
         topic: DataTypes.TEXT,
         link: DataTypes.TEXT,
         description: DataTypes.TEXT
-    }, {});
+    }, {tableName: 'contentcourses'});
     ContentCourse.associate = function(models) {
         // associations can be defined here
-        ContentCourse.belongsTo(models.Course, { foreignKey: 'courseId' });
+        ContentCourse.belongsTo(models.Course, { foreignKey: 'courseid' });
     };
     return ContentCourse;
 };

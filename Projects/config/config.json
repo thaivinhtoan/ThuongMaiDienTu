@@ -1,18 +1,11 @@
 {
   "development": {
-    "username": "gclfvxjsvsfkst",
-    "password": "48891e045c8a599bfde165be1be8fcf7cbbade65d2fb7aef8acc691d9c34fc5a",
-    "database": "d5imr9pjuc1jsm",
-    "host": "ec2-54-210-128-153.compute-1.amazonaws.com",
-    "port": 5432,
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
-  },
+    "username": "postgres",
+    "password": "12345tien",
+    "database": "aromadb",
+    "host": "localhost",
+    "dialect": "postgres"
+},
   "test": {
     "username": "postgres",
     "password": "toan",

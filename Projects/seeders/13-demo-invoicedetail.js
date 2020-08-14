@@ -3,120 +3,155 @@
 module.exports = {
     up: (queryInterface, Sequelize) => {
         let data = [{
-            "userId": 1,
-            "codecourseId": 1,
+            "userid": 1,
+            "codecourseid": 1,
+            "courseid": 1,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 1,
-            "codecourseId": 2,
+            "userid": 1,
+            "codecourseid": 2,
+            "courseid": 2,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 2,
-            "codecourseId": 3,
+            "userid": 2,
+            "codecourseid": 3,
+            "courseid": 3,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 3,
-            "codecourseId": 4,
+            "userid": 3,
+            "codecourseid": 4,
+            "courseid": 4,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 4,
-            "codecourseId": 5,
+            "userid": 4,
+            "codecourseid": 5,
+            "courseid": 5,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 4,
-            "codecourseId": 6,
+            "userid": 4,
+            "codecourseid": 6,
+            "courseid": 6,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 5,
-            "codecourseId": 7,
+            "userid": 5,
+            "codecourseid": 7,
+            "courseid": 7,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 6,
-            "codecourseId": 8,
+            "userid": 6,
+            "codecourseid": 8,
+            "courseid": 8,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 7,
-            "codecourseId": 9,
+            "userid": 7,
+            "codecourseid": 9,
+            "courseid": 9,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 7,
-            "codecourseId": 10,
+            "userid": 7,
+            "codecourseid": 10,
+            "courseid": 10,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
           }, {
-            "userId": 8,
-            "codecourseId": 11,
+            "userid": 8,
+            "codecourseid": 11,
+            "courseid": 11,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 9,
-            "codecourseId": 12,
+            "userid": 9,
+            "codecourseid": 12,
+            "courseid": 12,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 9,
-            "codecourseId": 13,
+            "userid": 9,
+            "codecourseid": 13,
+            "courseid": 13,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 10,
-            "codecourseId": 14,
+            "userid": 10,
+            "codecourseid": 14,
+            "courseid": 14,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 1,
-            "codecourseId": 15,
+            "userid": 1,
+            "codecourseid": 15,
+            "courseid": 15,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 2,
-            "codecourseId": 16,
+            "userid": 2,
+            "codecourseid": 16,
+            "courseid": 16,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 3,
-            "codecourseId": 17,
+            "userid": 3,
+            "codecourseid": 17,
+            "courseid": 17,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 4,
-            "codecourseId": 18,
+            "userid": 4,
+            "codecourseid": 18,
+            "courseid": 18,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 5,
-            "codecourseId": 19,
+            "userid": 5,
+            "codecourseid": 19,
+            "courseid": 19,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 6,
-            "codecourseId": 20,
+            "userid": 6,
+            "codecourseid": 20,
+            "courseid": 20,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 7,
-            "codecourseId": 21,
+            "userid": 7,
+            "codecourseid": 21,
+            "courseid": 21,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 8,
-            "codecourseId": 22,
+            "userid": 8,
+            "codecourseid": 22,
+            "courseid": 22,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01" 
           }, {
-            "userId": 9,
-            "codecourseId": 23,
+            "userid": 9,
+            "codecourseid": 23,
+            "courseid": 23,
             "price": "100",
-            "datePurchase": "2020-07-01"
+            "datepurchase": "2020-07-01"
+          }, {
+            "userid": 11,
+            "codecourseid": 22,
+            "courseid": 22,
+            "price": "100",
+            "datepurchase": "2020-07-01" 
+          }, {
+            "userid": 11,
+            "codecourseid": 23,
+            "courseid": 23,
+            "price": "100",
+            "datepurchase": "2020-07-01"
           }];
         data.map(item => {
             item.createdAt = Sequelize.literal('NOW()');
@@ -124,12 +159,12 @@ module.exports = {
             return item;
         });
 
-        return queryInterface.bulkInsert('InvoiceDetails', data, {});
+        return queryInterface.bulkInsert('invoicedetails', data, {});
 
     },
 
     down: (queryInterface, Sequelize) => {
-        return queryInterface.bulkDelete('InvoiceDetails', null, {});
+        return queryInterface.bulkDelete('invoicedetails', null, {});
 
     }
 };

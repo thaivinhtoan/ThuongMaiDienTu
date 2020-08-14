@@ -7,16 +7,17 @@ module.exports = (sequelize, DataTypes) => {
         description: DataTypes.TEXT,
         availability: DataTypes.BOOLEAN,
         imagepath: DataTypes.TEXT,
-        thumbnailPath: DataTypes.TEXT,
-        overallReview: DataTypes.DOUBLE,
-        reviewCount: DataTypes.INTEGER
-    }, {});
+        thumbnailpath: DataTypes.TEXT,
+        overallreview: DataTypes.DOUBLE,
+        reviewcount: DataTypes.INTEGER
+    }, {tableName: 'courses'});
     Course.associate = function(models) {
         // associations can be defined here
-        Course.belongsTo(models.Category, { foreignKey: 'categoryId' });
-        Course.hasMany(models.Comment, { foreignKey: 'courseId' });
-        Course.hasMany(models.CourseLevel, { foreignKey: 'courseId' });
-        Course.hasMany(models.ContentCourse, { foreignKey: 'courseId' });
+        Course.belongsTo(models.Category, { foreignKey: 'categoryid' });
+        Course.hasMany(models.Comment, { foreignKey: 'courseid' });
+        Course.hasMany(models.CourseLevel, { foreignKey: 'courseid' });
+        Course.hasMany(models.ContentCourse, { foreignKey: 'courseid' });
+        Course.hasMany(models.InvoiceDetail, { foreignKey: 'courseid' });
     };
     return Course;
 };

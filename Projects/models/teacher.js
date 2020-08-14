@@ -4,10 +4,10 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         imagepath: DataTypes.TEXT,
         summary: DataTypes.TEXT
-    }, {});
+    }, {tableName: 'teachers'});
     Teacher.associate = function(models) {
         // associations can be defined here
-        Teacher.hasMany(models.Course, { foreignKey: 'teacherId' });
+        Teacher.hasMany(models.Course, { foreignKey: 'teacherid' });
     };
     return Teacher;
 };
