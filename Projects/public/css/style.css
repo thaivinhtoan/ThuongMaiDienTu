@@ -4762,3 +4762,33 @@ a {
         padding-bottom: 115px !important
     }
 }
+
+
+/* login social media */
+
+
+/* add appropriate colors to fb, twitter and google buttons */
+
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.google {
+    background-color: #dd4b39;
+    color: white;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
