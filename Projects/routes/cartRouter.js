@@ -44,14 +44,13 @@ router.delete("/all", (req, res) => {
 });
 
 paypal.configure({
-  mode: "sandbox", //sandbox or live
+  mode: "sandbox",
   client_id:
     "ASFthYP4yc_HJ4s3FHW9XqclQ7R2TeTnEFjcFoziey5eoPDOeFwszehw8ojqBpH3_UvNx0G5F_XVIQVE",
   client_secret:
     "ECDD_KQj8uXbZeoizVr47NfwM0Fzw-tSOQfO42LIUEP_x04G-ba-xdNgYem0bb0qeQPDTPtB6wj6W8Gh",
 });
 
-//let app = express();
 router.post("/pay", (req, res) => {
   var create_payment_json = {
     intent: "sale",
