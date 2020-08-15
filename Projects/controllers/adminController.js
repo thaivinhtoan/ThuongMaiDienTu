@@ -16,7 +16,12 @@ controller.getAmountBillCategory = async () =>{
 
 controller.getAmountUser = async () =>{
     
-    const hd= await models.sequelize.query(`Select count(*) as sl from users`, { type: models.Sequelize.QueryTypes.SELECT})
+    const hd= await models.sequelize.query(`Select count(*) as sl from users `, { type: models.Sequelize.QueryTypes.SELECT})
+    return hd
+}
+controller.getAmountBill = async () =>{
+    
+    const hd= await models.sequelize.query(`Select count(*) as sl1 from invoicedetails `, { type: models.Sequelize.QueryTypes.SELECT})
     return hd
 }
 

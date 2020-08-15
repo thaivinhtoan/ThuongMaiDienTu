@@ -10,6 +10,9 @@ router.get('/', userController.isLoggedIn,async(req, res, next) => {
     let sluser = await adminController.getAmountUser();
     res.locals.sluser = sluser;
 
+    let nb = await adminController.getAmountBill();
+    res.locals.nb = nb;
+
     let hoaDon_t = await adminController.getAmountBillteacher();
     res.locals.hoaDon_t = hoaDon_t;
     
