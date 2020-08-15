@@ -66,9 +66,10 @@ app.use('/cart', require('./routes/cartRouter'));
 app.use('/comments', require('./routes/commentRouter'));
 app.use('/reviews', require('./routes/reviewRouter'));
 app.use('/class', require('./routes/classRouter'));
-app.use('/class', require('./routes/adminRouter'));
+app.use('/admin', require('./routes/adminRouter'));
 
 
+ 
 app.get('/sync', (req, res) => {
     let models = require('./models');
     models.sequelize.sync()

@@ -13,10 +13,10 @@ router.get('/', userController.isLoggedIn,async(req, res, next) => {
 router.get('/:id', userController.isLoggedIn, async (req, res) => {
     
     
-    var id = req.params.id;
-    let content = await classController.getcontent(id);
+    var ID = req.params.id;
+    let content = await classController.getcontent(ID);
     res.locals.content = content;
-    let tc = await classController.getteacher(id);
+    let tc = await classController.getteacher(ID);
     res.locals.tc = tc; 
     res.render('single-class')
 });
