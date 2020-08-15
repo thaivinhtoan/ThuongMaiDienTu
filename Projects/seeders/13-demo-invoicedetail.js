@@ -3,7 +3,7 @@
 module.exports = {
     up: (queryInterface, Sequelize) => {
         let data = [{
-            "userid": 1,
+            "userid": 11,
             "codecourseid": 1,
             "courseid": 1,
             "price": "100",
@@ -33,7 +33,7 @@ module.exports = {
             "price": "100",
             "datepurchase": "2020-07-01"
           }, {
-            "userid": 4,
+            "userid": 11,
             "codecourseid": 6,
             "courseid": 6,
             "price": "100",
@@ -45,7 +45,7 @@ module.exports = {
             "price": "100",
             "datepurchase": "2020-07-01" 
           }, {
-            "userid": 6,
+            "userid": 11,
             "codecourseid": 8,
             "courseid": 8,
             "price": "100",
