@@ -3,6 +3,8 @@ module.exports = (sequelize, DataTypes) => {
     const InvoiceDetail = sequelize.define('InvoiceDetail', {
         price: DataTypes.DECIMAL,
         datepurchase: DataTypes.DATE
+    }, {
+        timestamps: true
     }, {tableName: 'invoicedetails'});
     InvoiceDetail.associate = function(models) {
         // associations can be defined here

@@ -67,7 +67,7 @@ app.use('/comments', require('./routes/commentRouter'));
 app.use('/reviews', require('./routes/reviewRouter'));
 app.use('/class', require('./routes/classRouter'));
 app.use('/class', require('./routes/adminRouter'));
-
+app.use('/order', require('./routes/orderRouter'));
 
  
 app.get('/sync', (req, res) => {
