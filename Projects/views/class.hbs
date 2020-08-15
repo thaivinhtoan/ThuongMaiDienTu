@@ -23,7 +23,7 @@
 <!--================Blog Categorie Area =================-->
 
 
-   
+   {{#each cl}}
   <section class="centera">
     <div class="card text-center card-product">
     <div class="card text-center card-product">
@@ -33,7 +33,8 @@
         <h4 class="card-product__title" class = "centera"><a href="/class/{{id}}">Khóa học: {{name}} </a></h4>
     </div> 
      <p class="card-product__price"> Tóm Tắt: {{Summary}} </p>
-</div>
+    </div>
   </div>
   </section>
+  {{/each}}
   
