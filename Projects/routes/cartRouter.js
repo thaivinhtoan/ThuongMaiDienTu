@@ -58,8 +58,8 @@ router.post("/pay", (req, res) => {
       payment_method: "paypal",
     },
     redirect_urls: {
-      return_url: "http://localhost:5000/",
-      cancel_url: "http://localhost:5000/cart",
+      return_url: "https://thuongmaidientu20b01.herokuapp.com/",
+      cancel_url: "https://thuongmaidientu20b01.herokuapp.com/cart",
     },
     transactions: [
       {

@@ -1,24 +1,33 @@
 # HCMUS-EC-20B01
 
-# NHÓM 20B01
+# ĐỒ ÁN THƯƠNG MẠI ĐIỆN TỬ
 
-##Database
+## Hướng dẫn cài đặt
 
-Bước 1:
-Download PostgreSQL 
+####Bước 1:
+Download PostgresSQL 
 Tạo Database tên: aromadb
 
-Bước 2:
+####Bước 2: Tạo môi trường debug
 Teminal chạy câu lệnh:
-npm install -s pg pg-hstore 
-npm install -g sequelize sequelize-cli
+> npm install 
 
-Bước 3: 
-Chạy project và chạy đường dẫn 
-locallhost:5000/sync
+####Bước 3:  Tạo bảng
+Teminal chạy câu lệnh: 
+> nodemon
 
-Bước 4:
-Teminal chạy câu lệnh
-sequelize db:seed:all
+Truy cập trên trình duyệt:
+> localhost:5000/sync
 
-Note: vào file config.jison để đổi lại mật khẩu của postgre
+####Bước 4: Đồng bộ database
+Teminal chạy câu lệnh sau 
+> sequelize db:seed:all
+
+###Bước 5: Kiểm tra kết quả
+Trên teminal:
+> nodemon
+
+Trên trình duyệt truy cập:
+> localhost:5000
+
+***Note: vào file config.json để đổi lại mật khẩu của postgres***
