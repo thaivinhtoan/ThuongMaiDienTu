@@ -12,19 +12,21 @@
               <div class="section-intro pb-60px">
                
                 <div class="row" style="width: 1500px; height: 371px;">
+                    {{#each hoaDon_c}}
                     <div class="column col-sm-2">
                         <div class="card">
                             <div class="card-product__img">
-                                <img class="card-img" src="img/product/product1.png" alt="">
+                                <img class="card-img" src="{{imagepath}}" alt="">
                             </div>
                             <div class="card-body">
-                                <p>SQL</p>
+                                <p>{{name}}</p>
                                 <h4 class="card-product__title"><a href="#">Amount sold</a></h4>
-                                <p class="card-product__price">123</p>
+                                <p class="card-product__price">{{sl}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="column col-sm-2">
+                    {{/each}}
+                    {{!-- <div class="column col-sm-2">
                         <div class="card">
                             <div class="card-product__img">
                                 <img class="card-img" src="img/product/product2.png" alt="">
@@ -71,7 +73,7 @@
                                 <p class="card-product__price">234</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <table class="table">
@@ -89,12 +91,12 @@
                     <tbody>
                         <tr>
                             <td>Tien</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
                         </tr>
                         <tr>
                             <td>Diem</td>

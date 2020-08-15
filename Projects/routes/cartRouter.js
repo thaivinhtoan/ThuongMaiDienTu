@@ -9,28 +9,28 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/", (req, res, next) => {
-  var courseId = req.body.id;
+  var courseid = req.body.id;
   var quantity = isNaN(req.body.quantity) ? 1 : req.body.quantity;
   var courseController = require("../controllers/productController");
   courseController
-    .getById(courseId)
+    .getByid(courseid)
     .then((course) => {
-      var cartItem = req.session.cart.add(course, courseId, quantity);
+      var cartItem = req.session.cart.add(course, courseid, quantity);
       res.json(cartItem);
     })
     .catch((error) => next(error));
 });
 
 router.put("/", (req, res) => {
-  var courseId = req.body.id;
+  var courseid = req.body.id;
   var quantity = parseInt(req.body.quantity);
-  var cartItem = req.session.cart.update(courseId, quantity);
+  var cartItem = req.session.cart.update(courseid, quantity);
   res.json(cartItem);
 });
 
 router.delete("/", (req, res) => {
-  var courseId = req.body.id;
-  req.session.cart.remove(courseId);
+  var courseid = req.body.id;
+  req.session.cart.remove(courseid);
   res.json({
     totalQuantity: req.session.cart.totalQuantity,
     totalPrice: req.session.cart.totalPrice,
