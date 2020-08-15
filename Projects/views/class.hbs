@@ -13,31 +13,27 @@
 
 <!--================!Blog user information =================-->
 
+    <section class="section-margin calc-60px">>
+       <div class="container" style="text-align-last: center;">
+              <div class="section-intro pb-60px">
+                 <h2>Danh Sách Khóa Học:  </h2>
+                 </div>
+       </div>
 
 <!--================Blog Categorie Area =================-->
-<section class="blog_categorie_area">
-    <div class="container">
-        
-        <div style="width: 800px; heigh: 271px;">
-            {{#each cl}}
-            <div >
-                <div class="categories_post">
-                    <img class="card-img rounded-0" src="{{imagepath}}" alt="post">
-                    <div class="categories_details">
-                        <div class="categories_text">
-                            <a href="/class/{{id}}">
-                                <h5>Name course: {{name}}</h5>
-                            </a>
-                            <div class="border_line">
-                            <p>Summary: {{summary}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-           
-        </div>
-        
+
+
+   
+  <section class="centera">
+    <div class="card text-center card-product">
+    <div class="card text-center card-product">
+       <a href='/class/{{id}}'><img class="card-product__viewclass"  src={{imagepath}} alt="post" > </a> 
     </div>
-</section>
+    <div class="card-body">
+        <h4 class="card-product__title" class = "centera"><a href="/class/{{id}}">Khóa học: {{name}} </a></h4>
+    </div> 
+     <p class="card-product__price"> Tóm Tắt: {{Summary}} </p>
+</div>
+  </div>
+  </section>
+  

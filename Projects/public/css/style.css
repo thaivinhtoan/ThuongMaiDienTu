@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+
 body {
     color: #777;
     font-family: "Roboto", sans-serif;
@@ -7,7 +8,7 @@ body {
     font-weight: 400;
     line-height: 1.667
 }
-
+ 
 ul {
     list-style-type: none;
     margin: 0;
@@ -103,6 +104,7 @@ a {
     .section-margin.calc-60px {
         margin: 120px 0 70px 0
     }
+   
 }
 
 .section-margin--small {
@@ -856,8 +858,21 @@ a {
 }
 
 .card-product__img {
-    position: relative
+     
+    position: relative;
+   
 }
+.card-product__viewclass {
+     
+    width: 456px ;
+    height: 320px;
+  
+    display: block;
+    margin: 0 auto;
+   
+}
+
+
 
 .card-product__imgOverlay {
     background: rgba(255, 255, 255, 0.5);
@@ -1792,7 +1807,11 @@ a {
     margin-bottom: 5px;
     margin-top: 30px
 }
-
+.centera {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
 .blog_right_sidebar .author_widget p {
     margin-bottom: 0px
 }
@@ -3542,6 +3561,7 @@ a {
     z-index: 9;
     cursor: pointer;
     -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
     font-weight: 500;
     color: #222;
     font-size: 15px;
@@ -4567,9 +4587,11 @@ a {
     position: absolute;
     right: 0px;
     top: 14px;
+    
     @icnlude transition
+    
 }
-
+ 
 .review_item .media .media-body .reply_btn:hover {
     background: #384aeb;
     border-color: #384aeb;

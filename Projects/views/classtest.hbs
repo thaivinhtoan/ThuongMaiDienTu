@@ -1,0 +1,43 @@
+{{> banner }}
+<!--================Blog user information =================-->
+<section class="blog_user_infomation">
+    <div style="text-align-last: center;">
+        {{#each user_inf}}
+            <img src="{{avatarpath}}" alt="">
+            <h5>Fullname: {{fullname}} </h5>
+            <h5>Email: {{username}} </h5>
+            
+        {{/each}}
+    </div>
+</section>
+
+<!--================!Blog user information =================-->
+
+
+<!--================Blog Categorie Area =================-->
+<section class="blog_categorie_area">
+    <div class="container">
+        
+        <div style="width: 800px; heigh: 271px;">
+            {{#each cl}}
+            <div >
+                <div class="categories_post">
+                    <img class="card-img rounded-0" src="{{imagepath}}" alt="post">
+                    <div class="categories_details">
+                        <div class="categories_text">
+                            <a href="/class/{{id}}">
+                                <h5>Name course: {{name}}</h5>
+                            </a>
+                            <div class="border_line">
+                            <p>Summary: {{summary}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+           
+        </div>
+        
+    </div>
+</section>

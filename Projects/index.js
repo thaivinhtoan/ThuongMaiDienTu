@@ -100,6 +100,7 @@ app.use('/reviews', require('./routes/reviewRouter'));
 app.use('/class', require('./routes/classRouter'));
 
 
+ 
 app.get('/sync', (req, res) => {
     let models = require('./models');
     models.sequelize.sync()
