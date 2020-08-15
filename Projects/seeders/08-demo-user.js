@@ -62,6 +62,12 @@ module.exports = {
             "fullname": "Derry Malam",
             "avatarpath": "/img/product/review-1.png",
             "isadmin": false
+        },{
+            "username": "abc@gmail.com",
+            "password": "$2a$10$AdA2sxpEnILqbXctNc.dcusO04voB45DKwiif7mLm3KxBoEBiuZGa",
+            "fullname": "Abc",
+            "avatarpath": "/img/product/review-1.png",
+            "isadmin": false
         }];
         data.map(item => {
             item.createdAt = Sequelize.literal('NOW()');

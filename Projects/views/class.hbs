@@ -16,25 +16,52 @@
     <section class="section-margin calc-60px">>
        <div class="container" style="text-align-last: center;">
               <div class="section-intro pb-60px">
-                 <h2>Danh Sách Khóa Học:  </h2>
+                 <h2>Your course list:  </h2>
                  </div>
        </div>
 
 <!--================Blog Categorie Area =================-->
 
+<section class="blog_categorie_area">
+    <div class="container">
+        <div style="width: 900px; heigh: 271px;">
+            {{#each cl}}
+            <div >
+                <div class="categories_post">
+                    <img class="card-img " src="{{imagepath}}" alt="post">
+                    <div class="categories_details">
+                        <div class="categories_text">
+                            <a href="/class/{{id}}">
+                                <h5>Name course: {{name}}</h5>
+                                <h5>Tearcher: {{teacher}}</h5>
+                            </a>
+                            <div class="border_line">
+                            <p>Summary: {{summary}}</p>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+            {{/each}}
+           
+        </div>
+        </div>
+    </div>
+</section>
 
-   {{#each cl}}
+   {{!-- {{#each cl}}
   <section class="centera">
     <div class="card text-center card-product">
     <div class="card text-center card-product">
        <a href='/class/{{id}}'><img class="card-product__viewclass"  src={{imagepath}} alt="post" > </a> 
     </div>
     <div class="card-body">
-        <h4 class="card-product__title" class = "centera"><a href="/class/{{id}}">Khóa học: {{name}} </a></h4>
+        <h4 class="card-product__title" class = "centera"><a href="/class/{{id}}">Course: {{name}} </a></h4>
+        <h5>Teacher: {{teacher}}</h5>
     </div> 
-     <p class="card-product__price"> Tóm Tắt: {{Summary}} </p>
+     <p class="card-product__price"> Summary: {{summary}} </p>
     </div>
   </div>
   </section>
-  {{/each}}
+  {{/each}} --}}
   

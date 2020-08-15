@@ -10,13 +10,19 @@ controller.getuser = async (id) =>{
 
 
 controller.getclass = async (id)=>{
-    const clas = await models.sequelize.query(`SELECT c.* FROM invoicedetails as a, courses as c where a.userid = 1 and a.courseid = c.id `, { type: models.Sequelize.QueryTypes.SELECT})
+
+    const clas = await models.sequelize.query(`SELECT c.*, b.name teacher FROM invoicedetails as a, teachers b,courses as c where a.userid = ${id} and a.courseid = c.id and b.id = c.teacherid `, { type: models.Sequelize.QueryTypes.SELECT})
+    
     return clas
 };
 
  
 controller.getcontent = async (id)=>{
     const content = await models.sequelize.query(`Select * from contentcourses where courseid = ${id}   `, { type: models.Sequelize.QueryTypes.SELECT})
+    return content
+};
+controller.getteacher = async (id)=>{
+    const content = await models.sequelize.query(`Select a.name, b.name teacher, b.imagepath from courses a, teachers b where a.id = ${id}  and a.teacherid = b.id `, { type: models.Sequelize.QueryTypes.SELECT})
     return content
 };
 
