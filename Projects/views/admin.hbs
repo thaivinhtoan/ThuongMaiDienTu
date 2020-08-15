@@ -7,11 +7,18 @@
                  <h2>Admin </h2>
                  </div>
        </div>
+       <section class="blog_user_infomation">
+        <div style="text-align-last: center;">
+                {{#each sluser}}
+                <h5>Amount user: {{sl}}</h5>
+                {{/each}}       
+        </div>
+        </section>
     <section class="section-margin calc-60px">>
         <div class="container">
               <div class="section-intro pb-60px">
                
-                <div class="row" style="width: 1500px; height: 371px;">
+                <div class="row" style="width: 1350px; height: 371px;">
                     {{#each hoaDon_c}}
                     <div class="column col-sm-2">
                         <div class="card">
@@ -20,60 +27,31 @@
                             </div>
                             <div class="card-body">
                                 <p>{{name}}</p>
-                                <h4 class="card-product__title"><a href="#">Amount sold</a></h4>
+                                <h4 class="card-product__title">Amount sold</h4>
                                 <p class="card-product__price">{{sl}}</p>
                             </div>
                         </div>
                     </div>
                     {{/each}}
-                    {{!-- <div class="column col-sm-2">
-                        <div class="card">
-                            <div class="card-product__img">
-                                <img class="card-img" src="img/product/product2.png" alt="">
-                            </div>
-                            <div class="card-body">
-                                <p>Python</p>
-                                <h4 class="card-product__title"><a href="#">Amount sold</a></h4>
-                                <p class="card-product__price">233</p>
-                            </div>
-                        </div>
-                    </div>
+          
+                </div>
+
+                <div class="row" style="width: 1350px; height: 371px;">
+                    {{#each hoaDon_t}}
                     <div class="column col-sm-2">
                         <div class="card">
                             <div class="card-product__img">
-                                <img class="card-img" src="img/product/product3.png" alt="">
+                                <img class="card-img" src="{{imagepath}}" alt="">
                             </div>
                             <div class="card-body">
-                                <p>Java</p>
-                                <h4 class="card-product__title"><a href="#">Amount sold</a></h4>
-                                <p class="card-product__price">234</p>
+                                <p>{{name}}</p>
+                                <h4 class="card-product__title">Amount sold</h4>
+                                <p class="card-product__price">{{sl}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="column col-sm-2">
-                        <div class="card">
-                            <div class="card-product__img">
-                                <img class="card-img" src="img/product/product3.png" alt="">
-                            </div>
-                            <div class="card-body">
-                                <p>Java</p>
-                                <h4 class="card-product__title"><a href="#">Amount sold</a></h4>
-                                <p class="card-product__price">234</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column col-sm-2">
-                        <div class="card">
-                            <div class="card-product__img">
-                                <img class="card-img" src="img/product/product3.png" alt="">
-                            </div>
-                            <div class="card-body">
-                                <p>Java</p>
-                                <h4 class="card-product__title"><a href="#">Amount sold</a></h4>
-                                <p class="card-product__price">234</p>
-                            </div>
-                        </div>
-                    </div> --}}
+                    {{/each}}
+          
                 </div>
 
                 <table class="table">
@@ -91,39 +69,48 @@
                     <tbody>
                         <tr>
                             <td>Tien</td>
-                            <td>a</td>
-                            <td>b</td>
-                            <td>c</td>
-                            <td>d</td>
-                            <td>e</td>
-                            <td>f</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
                         </tr>
                         <tr>
                             <td>Diem</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>2</td>
                         </tr>
                         <tr>
                             <td>Tran</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>3</td>
                         </tr>
                         <tr>
                             <td>Toan</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Minh</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>3</td>
                         </tr>
                     </tbody>
                 </table>
