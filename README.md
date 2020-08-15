@@ -2,7 +2,8 @@
 
 # NHÓM 20B01
 
-#Database
+##Database
+
 Bước 1:
 Download PostgreSQL 
 Tạo Database tên: aromadb
