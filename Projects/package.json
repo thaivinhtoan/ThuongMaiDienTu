@@ -20,6 +20,7 @@
     "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
     "ico": "^0.3.3",
+    "loopback-ds-timestamp-mixin": "^3.4.1",
     "nodemailer": "^6.4.11",
     "paypal-rest-sdk": "^1.8.1",
     "pg": "^8.3.0",
